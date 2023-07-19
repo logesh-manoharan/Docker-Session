@@ -1,0 +1,1736 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\WINDOWS\system32> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                                     NAMES
+09036399f9ff   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:49154->80/tcp, :::49154->80/tcp   nginx-container-1
+57c78a724337   nginx     "/docker-entrypoint.…"   12 minutes ago       Up 12 minutes       0.0.0.0:49153->80/tcp, :::49153->80/tcp   nginx-container
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker run -itd -p 5050:80 --name nginx-container-2 nginx
+dcfbbd4f700fd99786d53da90558f5beab262202a78c53cdfcca1032a8fd5140
+PS C:\WINDOWS\system32> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+dcfbbd4f700f   nginx     "/docker-entrypoint.…"   4 seconds ago    Up 3 seconds    0.0.0.0:5050->80/tcp, :::5050->80/tcp     nginx-container-2
+09036399f9ff   nginx     "/docker-entrypoint.…"   3 minutes ago    Up 3 minutes    0.0.0.0:49154->80/tcp, :::49154->80/tcp   nginx-container-1
+57c78a724337   nginx     "/docker-entrypoint.…"   14 minutes ago   Up 14 minutes   0.0.0.0:49153->80/tcp, :::49153->80/tcp   nginx-container
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                      PORTS                                     NAMES
+dcfbbd4f700f   nginx                                     "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes               0.0.0.0:5050->80/tcp, :::5050->80/tcp     nginx-container-2
+09036399f9ff   nginx                                     "/docker-entrypoint.…"   13 minutes ago   Up 13 minutes               0.0.0.0:49154->80/tcp, :::49154->80/tcp   nginx-container-1
+57c78a724337   nginx                                     "/docker-entrypoint.…"   24 minutes ago   Up 24 minutes               0.0.0.0:49153->80/tcp, :::49153->80/tcp   nginx-container
+e57491f35154   automatics_analytics_dashboard_backend    "docker-entrypoint.s…"   20 months ago    Exited (0) 46 minutes ago                                             automaitcs-analytics-service
+9dd04b3ec476   mongo                                     "docker-entrypoint.s…"   20 months ago    Exited (0) 46 minutes ago                                             mongo
+2f921765c294   automatics_analytics_dashboard_frontend   "docker-entrypoint.s…"   20 months ago    Exited (0) 20 months ago                                              frontend
+9394e797bed8   hello-docker                              "docker-entrypoint.s…"   23 months ago    Exited (0) 23 months ago                                              practical_hawking
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker stop nginx-container
+nginx-container
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                      PORTS                                     NAMES
+dcfbbd4f700f   nginx                                     "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes               0.0.0.0:5050->80/tcp, :::5050->80/tcp     nginx-container-2
+09036399f9ff   nginx                                     "/docker-entrypoint.…"   13 minutes ago   Up 13 minutes               0.0.0.0:49154->80/tcp, :::49154->80/tcp   nginx-container-1
+57c78a724337   nginx                                     "/docker-entrypoint.…"   24 minutes ago   Exited (0) 3 seconds ago                                              nginx-container
+e57491f35154   automatics_analytics_dashboard_backend    "docker-entrypoint.s…"   20 months ago    Exited (0) 46 minutes ago                                             automaitcs-analytics-service
+9dd04b3ec476   mongo                                     "docker-entrypoint.s…"   20 months ago    Exited (0) 46 minutes ago                                             mongo
+2f921765c294   automatics_analytics_dashboard_frontend   "docker-entrypoint.s…"   20 months ago    Exited (0) 20 months ago                                              frontend
+9394e797bed8   hello-docker                              "docker-entrypoint.s…"   23 months ago    Exited (0) 23 months ago                                              practical_hawking
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker stop nginx-container-1
+nginx-container-1
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker instpect nginx-container
+docker: 'instpect' is not a docker command.
+See 'docker --help'
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker inspect nginx-container
+[
+    {
+        "Id": "57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd",
+        "Created": "2023-07-19T09:53:18.1026663Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-07-19T09:53:19.0455703Z",
+            "FinishedAt": "2023-07-19T10:17:59.3407381Z"
+        },
+        "Image": "sha256:021283c8eb95be02b23db0de7f609d603553c6714785e7a673c6594a624ffbda",
+        "ResolvConfPath": "/var/lib/docker/containers/57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd/hostname",
+        "HostsPath": "/var/lib/docker/containers/57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd/hosts",
+        "LogPath": "/var/lib/docker/containers/57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd/57c78a7243378dda1dd2e9e178b087d91a065793a74347ce2cd832093cd7a4dd-json.log",
+        "Name": "/nginx-container",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": true,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                50,
+                104
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/a97966c44fdf6c03ba76311e6a2c3e8c7c884ea7527dc5774b5258a4119e1e48-init/diff:/var/lib/docker/overlay2/f4e88f0aa883484c55e84e26ea77dae5dc90299ff70d6538121114cbab6ddee2/diff:/var/lib/docker/overlay2/a331501c2efe4e534cf7157686a66b4cb7f4fa90f986760577fac3219ff20f85/diff:/var/lib/docker/overlay2/213a084dfbd94833ba00f928fc08e27cb304e33cb28b28b10e5dedc2a67687fb/diff:/var/lib/docker/overlay2/c6b06af9755bb4cb4627199b0d4c3fc19aadd0066e83e572628b96e22904e79e/diff:/var/lib/docker/overlay2/9a66a6a9efb9098a280e78bd6a499171b9123eaad8da95028b4b17c94b8c771c/diff:/var/lib/docker/overlay2/871b31b862c6c3ca156a5c26f5a634795d998db8b047136d4bbcb96e05a2a755/diff:/var/lib/docker/overlay2/290638875b3a9cc0ea521d528c211259f6d4ba9d1e17e83b98e190ca3f8aa150/diff",
+                "MergedDir": "/var/lib/docker/overlay2/a97966c44fdf6c03ba76311e6a2c3e8c7c884ea7527dc5774b5258a4119e1e48/merged",
+                "UpperDir": "/var/lib/docker/overlay2/a97966c44fdf6c03ba76311e6a2c3e8c7c884ea7527dc5774b5258a4119e1e48/diff",
+                "WorkDir": "/var/lib/docker/overlay2/a97966c44fdf6c03ba76311e6a2c3e8c7c884ea7527dc5774b5258a4119e1e48/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "57c78a724337",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.25.1",
+                "NJS_VERSION=0.7.12",
+                "PKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "0855c698a8c0203c18de8d0966fc6757f467fab71ad2c3a680f6a520ab4a6dc4",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/0855c698a8c0",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "f41ceac181416450d0aa17c7b19511fee12821ca128bf05443aa17f29f793bb7",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker run -itd --name ubuntu-container ubuntu:23.04
+6248489c6b1971e3046d64516dfd9a3464f3898c51e9d117fb5595f26ab02d28
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+6248489c6b19   ubuntu:23.04   "/bin/bash"              6 seconds ago    Up 4 seconds                                            ubuntu-container
+dcfbbd4f700f   nginx          "/docker-entrypoint.…"   13 minutes ago   Up 13 minutes   0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker exec -it ubuntu-container /bin/bash
+root@6248489c6b19:/#
+root@6248489c6b19:/#
+root@6248489c6b19:/# ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+root@6248489c6b19:/# exit;
+exit
+PS C:\WINDOWS\system32> docker run -itd -p 6060:80 --name ubuntu-web ubuntu:latest
+1b2ae2ee5857d44c4c62596640569b62930e6f626e8904b0008d645ddb013c3f
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+1b2ae2ee5857   ubuntu:latest   "/bin/bash"              6 seconds ago    Up 4 seconds    0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04    "/bin/bash"              5 minutes ago    Up 5 minutes                                            ubuntu-container
+dcfbbd4f700f   nginx           "/docker-entrypoint.…"   19 minutes ago   Up 19 minutes   0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker exec -it ubuntu-web /bin/bash
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.0 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [723 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [725 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [952 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1008 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [732 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [49.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1207 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [25.6 kB]
+Fetched 25.8 MB in 14s (1799 kB/s)
+Reading package lists... Done
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# apt-get install apache2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 ca-certificates file libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libbrotli1 libcurl4 libexpat1 libgdbm-compat4
+  libgdbm6 libicu70 libjansson4 libldap-2.5-0 libldap-common liblua5.3-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.34 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libsqlite3-0 libssh-4 libxml2 mailcap media-types mime-support netbase
+  openssl perl perl-modules-5.34 publicsuffix ssl-cert xz-utils
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser ufw bzip2-doc
+  gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 ca-certificates file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libbrotli1 libcurl4 libexpat1
+  libgdbm-compat4 libgdbm6 libicu70 libjansson4 libldap-2.5-0 libldap-common liblua5.3-0
+  libmagic-mgc libmagic1 libnghttp2-14 libperl5.34 libpsl5 librtmp1 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4 libxml2 mailcap media-types
+  mime-support netbase openssl perl perl-modules-5.34 publicsuffix ssl-cert xz-utils
+0 upgraded, 43 newly installed, 0 to remove and 0 not upgraded.
+Need to get 25.6 MB of archives.
+After this operation, 111 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.2 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.2 [4818 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.2 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1 amd64 1.7.0-8ubuntu0.22.04.1 [108 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.2 [91.0 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4.22.04.1 [92.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsqlite3-0 amd64 3.37.2-2ubuntu0.1 [641 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4.22.04.1 [11.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.14+dfsg-0ubuntu0.22.04.2 [183 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4.22.04.1 [9168 B]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssh-4 amd64 0.9.6-2ubuntu0.22.04.1 [185 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.10 [290 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjansson4 amd64 2.13.1-1.1build3 [32.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 libicu70 amd64 70.1-2 [10.6 MB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxml2 amd64 2.9.13+dfsg-1ubuntu0.3 [763 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.5 [1345 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.5 [165 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.5 [89.1 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3696 B]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.5 [97.8 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.10 [1183 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20230311ubuntu0.22.04.1 [155 kB]
+Get:34 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:35 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmagic-mgc amd64 1:5.41-3 [257 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmagic1 amd64 1:5.41-3 [87.2 kB]
+Get:37 http://archive.ubuntu.com/ubuntu jammy/main amd64 file amd64 1:5.41-3 [21.5 kB]
+Get:38 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+Get:39 http://archive.ubuntu.com/ubuntu jammy/main amd64 xz-utils amd64 5.2.5-2ubuntu1 [84.8 kB]
+Get:40 http://archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.14+dfsg-0ubuntu0.22.04.2 [15.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1.2 [68.8 kB]
+Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+Fetched 25.6 MB in 39s (659 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.2_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.2) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.2_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.2_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.2) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../05-libapr1_1.7.0-8ubuntu0.22.04.1_amd64.deb ...
+Unpacking libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.4.7-1ubuntu0.2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.2) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../07-libaprutil1_1.6.1-5ubuntu4.22.04.1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../08-libsqlite3-0_3.37.2-2ubuntu0.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.37.2-2ubuntu0.1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../09-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4.22.04.1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../10-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../11-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../12-libldap-2.5-0_2.5.14+dfsg-0ubuntu0.22.04.2_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../13-libaprutil1-ldap_1.6.1-5ubuntu4.22.04.1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../14-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../15-libnghttp2-14_1.43.0-1build3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../16-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../17-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../18-libssh-4_0.9.6-2ubuntu0.22.04.1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../19-libcurl4_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.10) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../20-libjansson4_2.13.1-1.1build3_amd64.deb ...
+Unpacking libjansson4:amd64 (2.13.1-1.1build3) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../21-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+Selecting previously unselected package libicu70:amd64.
+Preparing to unpack .../22-libicu70_70.1-2_amd64.deb ...
+Unpacking libicu70:amd64 (70.1-2) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../23-libxml2_2.9.13+dfsg-1ubuntu0.3_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.13+dfsg-1ubuntu0.3) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../24-apache2-bin_2.4.52-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-bin (2.4.52-1ubuntu4.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../25-apache2-data_2.4.52-1ubuntu4.5_all.deb ...
+Unpacking apache2-data (2.4.52-1ubuntu4.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../26-apache2-utils_2.4.52-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-utils (2.4.52-1ubuntu4.5) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../27-media-types_7.0.0_all.deb ...
+Unpacking media-types (7.0.0) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../28-mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../29-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../30-apache2_2.4.52-1ubuntu4.5_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.5) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../31-openssl_3.0.2-0ubuntu1.10_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.10) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../32-ca-certificates_20230311ubuntu0.22.04.1_all.deb ...
+Unpacking ca-certificates (20230311ubuntu0.22.04.1) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../33-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../34-libmagic-mgc_1%3a5.41-3_amd64.deb ...
+Unpacking libmagic-mgc (1:5.41-3) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../35-libmagic1_1%3a5.41-3_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.41-3) ...
+Selecting previously unselected package file.
+Preparing to unpack .../36-file_1%3a5.41-3_amd64.deb ...
+Unpacking file (1:5.41-3) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../37-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../38-xz-utils_5.2.5-2ubuntu1_amd64.deb ...
+Unpacking xz-utils (5.2.5-2ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../39-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../40-libldap-common_2.5.14+dfsg-0ubuntu0.22.04.2_all.deb ...
+Unpacking libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../41-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../42-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Setting up libexpat1:amd64 (2.4.7-1ubuntu0.2) ...
+Setting up media-types (7.0.0) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up libmagic-mgc (1:5.41-3) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsqlite3-0:amd64 (3.37.2-2ubuntu0.1) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1build3) ...
+Setting up libmagic1:amd64 (1:5.41-3) ...
+Setting up libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Setting up file (1:5.41-3) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.2) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up libjansson4:amd64 (2.13.1-1.1build3) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up xz-utils (5.2.5-2ubuntu1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libssh-4:amd64 (0.9.6-2ubuntu0.22.04.1) ...
+Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+Setting up netbase (6.3) ...
+Setting up apache2-data (2.4.52-1ubuntu4.5) ...
+Setting up openssl (3.0.2-0ubuntu1.10) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libicu70:amd64 (70.1-2) ...
+Setting up libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Setting up libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up ca-certificates (20230311ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+137 added, 0 removed; done.
+Setting up ssl-cert (1.1.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.10) ...
+Setting up libxml2:amd64 (2.9.13+dfsg-1ubuntu0.3) ...
+Setting up apache2-utils (2.4.52-1ubuntu4.5) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.2) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.1) ...
+Setting up perl (5.34.0-3ubuntu1.2) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Setting up mime-support (3.66) ...
+Setting up apache2-bin (2.4.52-1ubuntu4.5) ...
+Setting up apache2 (2.4.52-1ubuntu4.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for ca-certificates (20230311ubuntu0.22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# service apache2 restart                                                  AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.3. Set the 'ServerName' directive globally to suppress this message
+                                                                                       [ OK ]
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# exit;
+exit
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker exec -it ubuntu-web /bin/bash
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# echo "<h1>This is a Sample Web Page.</h1>" > /var/www/html/index.html
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/#
+root@1b2ae2ee5857:/# docker commit ubuntu-web user-web-image:v1
+bash: docker: command not found
+root@1b2ae2ee5857:/# docker comit ubuntu-web user-web-image:v1
+bash: docker: command not found
+root@1b2ae2ee5857:/# exit;
+exit
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker commit ubuntu-web user-web-image:v1
+sha256:2cb1f27b85078d31ad9ea9c96f04807a39f0945cd93c7da867f54e24768d4170
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED         SIZE
+user-web-image                            v1            2cb1f27b8507   7 seconds ago   227MB
+nginx                                     latest        021283c8eb95   2 weeks ago     187MB
+ubuntu                                    latest        5a81c4b8502e   3 weeks ago     77.8MB
+ubuntu                                    23.04         1ed313b0551f   4 weeks ago     70.3MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago   1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago   1.55GB
+mongo                                     latest        4253856b2570   20 months ago   701MB
+hello-docker                              latest        59c52b193990   23 months ago   112MB
+logeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago   112MB
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker run -itd --name user-test-container -p 6061:80 user-web-image:v1
+f492f6d479975c7dd710f60bff823bf123959c388af023f5a91e211115bde92f
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> docker exec -it user-test-container /bin/bash
+root@f492f6d47997:/# service apache2 start
+ * Starting Apache httpd web server apache2                                                   AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.5. Set the 'ServerName' directive globally to suppress this message
+ *
+root@f492f6d47997:/# exit;
+exit
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> ls
+
+
+    Directory: C:\WINDOWS\system32
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     14-11-2021  12:07:12 PM                .BCWork
+d-----     07-12-2019  03:20:07 PM                0409
+d-----     14-11-2021  12:02:32 PM                AdvancedInstallers
+d-----     07-12-2019  02:44:57 PM                am-et
+d-----     07-12-2019  02:44:52 PM                AppLocker
+d-----     21-01-2022  07:26:22 PM                appmgmt
+d-----     21-02-2022  08:56:57 AM                appraiser
+d---s-     19-03-2022  09:40:31 PM                AppV
+d-----     22-03-2023  08:36:57 PM                ar-SA
+d-----     14-11-2021  11:50:50 AM                BestPractices
+d-----     19-07-2022  08:28:02 PM                bg-BG
+d-----     21-06-2023  11:37:34 AM                Boot
+d-----     07-12-2019  02:44:57 PM                Bthprops
+d-----     19-07-2023  10:39:00 AM                CatRoot
+d-----     19-07-2023  02:48:05 PM                catroot2
+d-----     14-11-2021  11:52:55 AM                cAVS
+d-----     17-05-2023  11:27:46 PM                CodeIntegrity
+d-----     14-11-2021  12:02:32 PM                Com
+d-----     19-07-2023  11:16:48 AM                config
+d---s-     07-12-2019  03:01:04 PM                Configuration
+d---s-     14-11-2021  12:02:32 PM                containers
+d-----     07-12-2019  02:44:57 PM                ContainerSettingsProviders
+d-----     20-07-2022  08:11:29 PM                cs-CZ
+d-----     20-07-2022  08:11:29 PM                da-DK
+d-----     19-04-2023  08:10:42 PM                DDFs
+d-----     19-04-2023  08:10:42 PM                de-DE
+d-----     19-03-2022  09:41:49 PM                DellTPad
+d---s-     21-01-2022  07:14:10 PM                DiagSvcs
+d-----     19-04-2023  08:10:42 PM                Dism
+d-----     07-12-2019  02:44:57 PM                downlevel
+d-----     17-07-2023  09:19:09 AM                drivers
+d-----     07-12-2019  02:44:52 PM                DriverState
+d-----     19-07-2023  10:40:00 AM                DriverStore
+d-----     02-03-2023  10:28:36 AM                DRVSTORE
+d---s-     07-12-2019  03:20:07 PM                dsc
+d-----     19-04-2023  08:10:42 PM                el-GR
+d-----     17-05-2023  11:27:49 PM                en
+d-----     21-02-2022  08:56:58 AM                en-GB
+d-----     21-06-2023  11:37:34 AM                en-US
+d-----     20-07-2022  08:11:30 PM                es-ES
+d-----     19-04-2023  08:10:42 PM                es-MX
+d-----     19-07-2022  08:28:02 PM                et-EE
+d---s-     14-11-2021  12:02:32 PM                F12
+d-----     07-12-2019  02:44:57 PM                ff-Adlm-SN
+d-----     19-10-2022  05:41:38 PM                fi-FI
+d-----     21-06-2023  11:37:34 AM                fr-CA
+d-----     21-06-2023  11:37:34 AM                fr-FR
+d-----     09-02-2023  11:55:04 AM                FxsTmp
+d-----     19-03-2019  10:22:45 AM                GroupPolicyUsers
+d-----     19-07-2022  08:28:02 PM                he-IL
+d-----     19-07-2022  08:28:02 PM                hr-HR
+d-----     22-03-2023  08:36:57 PM                hu-HU
+d-----     07-12-2019  03:24:01 PM                Hydrogen
+d-----     07-12-2019  02:44:57 PM                ias
+d-----     07-12-2019  02:44:57 PM                icsxml
+d-----     07-12-2019  02:44:52 PM                IME
+d-----     07-12-2019  02:44:52 PM                inetsrv
+d-----     07-12-2019  02:44:52 PM                InputMethod
+d-----     24-11-2021  09:02:02 AM                Intel
+d-----     07-12-2019  02:44:52 PM                Ipmi
+d-----     22-02-2023  09:33:18 AM                it-IT
+d-----     22-03-2023  08:36:57 PM                ja-jp
+d-----     14-11-2021  12:02:32 PM                Keywords
+d-----     22-03-2023  08:36:57 PM                ko-KR
+d-----     07-12-2019  02:44:52 PM                Licenses
+d-----     15-11-2021  09:14:32 AM                LogFiles
+d-----     11-05-2023  10:22:13 AM                Logs
+d-----     19-07-2022  08:28:02 PM                lt-LT
+d-----     19-07-2022  08:28:02 PM                lv-LV
+d---s-     21-06-2023  11:37:34 AM                lxss
+d-----     07-12-2019  03:22:44 PM                MailContactsCalendarSync
+d-----     14-11-2021  12:03:49 PM                Microsoft
+d-----     21-06-2023  11:37:34 AM                migration
+d-----     21-06-2023  11:37:34 AM                migwiz
+d-----     19-07-2023  10:44:36 AM                MRT
+d-----     07-12-2019  02:44:57 PM                MSDRM
+d-----     14-11-2021  12:07:12 PM                MsDtc
+d-----     07-12-2019  03:20:08 PM                MUI
+d-----     07-12-2019  02:44:57 PM                my-mm
+d-----     19-07-2022  08:28:02 PM                nb-NO
+d-----     14-11-2021  12:07:12 PM                NDF
+d-----     07-12-2019  02:44:52 PM                networklist
+d-----     21-06-2023  11:37:34 AM                nl-NL
+d---s-     07-12-2019  02:44:57 PM                Nui
+d-----     21-06-2023  11:37:34 AM                oobe
+d-----     14-11-2021  12:02:32 PM                OpenSSH
+d-----     07-12-2019  02:44:57 PM                osa-Osge-001
+d-----     19-10-2022  05:41:38 PM                PerceptionSimulation
+d-----     19-07-2022  08:28:02 PM                pl-PL
+d-----     07-12-2019  03:01:04 PM                PointOfService
+d-----     07-12-2019  03:20:08 PM                Printing_Admin_Scripts
+d-----     07-12-2019  02:44:52 PM                ProximityToast
+d-----     19-07-2022  08:28:02 PM                pt-BR
+d-----     19-07-2022  08:28:02 PM                pt-PT
+d-----     07-12-2019  03:01:04 PM                ras
+d-----     07-12-2019  02:44:52 PM                RasToast
+d-----     13-11-2021  10:38:08 PM                Recovery
+d-----     07-12-2019  02:44:52 PM                restore
+d-----     22-03-2023  08:36:57 PM                ro-RO
+d-----     19-07-2022  08:28:02 PM                ru-RU
+d-----     17-05-2023  11:27:49 PM                SecureBootUpdates
+d-----     22-02-2023  09:33:18 AM                setup
+d-----     07-12-2019  02:44:57 PM                Sgrm
+d-----     19-07-2022  08:28:02 PM                ShellExperiences
+d-----     07-12-2019  02:44:57 PM                si-lk
+d-----     22-03-2023  08:36:57 PM                sk-SK
+d-----     22-03-2023  08:36:57 PM                sl-SI
+d-----     19-07-2023  04:33:53 PM                SleepStudy
+d-----     07-12-2019  03:20:08 PM                slmgr
+d-----     07-12-2019  03:01:04 PM                SMI
+d-----     07-12-2019  02:44:52 PM                Speech
+d-----     07-12-2019  03:01:04 PM                Speech_OneCore
+d-----     06-06-2023  10:34:34 AM                spool
+d-----     07-12-2019  03:01:04 PM                spp
+d-----     21-06-2023  11:37:34 AM                sppui
+d-----     19-07-2022  08:28:02 PM                sr-Latn-RS
+d-----     19-07-2023  04:44:01 PM                sru
+d-----     22-03-2023  08:36:57 PM                sv-SE
+d-----     14-11-2021  12:02:32 PM                Sysprep
+d-----     14-11-2021  12:02:32 PM                SystemResetPlatform
+d-----     07-12-2019  02:44:57 PM                ta-in
+d-----     07-12-2019  02:44:57 PM                ta-lk
+d-----     15-07-2023  07:38:48 PM                Tasks
+d-----     14-11-2021  12:07:13 PM                Tasks_Migrated
+d-----     19-07-2022  08:28:02 PM                th-TH
+d-----     07-12-2019  02:44:57 PM                ti-et
+d-----     22-02-2023  09:33:18 AM                tr-TR
+d-----     22-03-2023  08:36:57 PM                uk-UA
+d---s-     21-12-2022  11:09:07 AM                UNP
+d-----     21-06-2023  11:37:34 AM                wbem
+d-----     07-12-2019  03:20:08 PM                WCN
+d-----     13-04-2022  10:46:14 PM                WDI
+d-----     19-07-2023  04:10:42 PM                WinBioDatabase
+d-----     17-08-2022  01:08:53 PM                WinBioPlugIns
+d-----     07-12-2019  02:44:52 PM                WindowsPowerShell
+d-----     07-12-2019  03:01:04 PM                winevt
+d-----     21-06-2023  11:37:34 AM                WinMetadata
+d-----     07-12-2019  03:20:08 PM                winrm
+d-----     16-11-2022  07:47:28 PM                zh-CN
+d-----     22-03-2023  08:36:57 PM                zh-TW
+d-----     05-05-2023  11:21:35 AM                {3DA228BE-34DA-49f4-A081-66465B077429}
+-a----     07-12-2019  04:49:14 PM          12304 07409496-a423-4a3e-b620-2cfb01a9318d_Hyper
+                                                  V-ComputeNetwork.dll
+-a----     07-12-2019  02:38:37 PM          12088 69fe178f-26e7-43a9-aa7d-2b616b672dde_event
+                                                  logservice.dll
+-a----     02-05-2022  09:14:52 AM          13168 6bea57fb-8dfb-4177-9ae8-42e8b3529933_Runti
+                                                  meDeviceInstall.dll
+-a----     07-12-2019  02:39:00 PM           3176 @AdvancedKeySettingsNotification.png
+-a----     07-12-2019  02:38:44 PM            232 @AppHelpToast.png
+-a----     07-12-2019  02:38:45 PM            308 @AudioToastIcon.png
+-a----     07-12-2019  02:38:21 PM            450 @BackgroundAccessToastIcon.png
+-a----     07-12-2019  02:38:52 PM            199 @bitlockertoastimage.png
+-a----     07-12-2019  02:38:52 PM          14791 @edptoastimage.png
+-a----     07-12-2019  02:38:52 PM            330 @EnrollmentToastIcon.png
+-a----     07-12-2019  02:38:58 PM            563 @language_notification_icon.png
+-a----     07-12-2019  02:39:45 PM            483 @optionalfeatures.png
+-a----     07-12-2019  02:39:37 PM            354 @StorageSenseToastIcon.png
+-a----     07-12-2019  02:39:07 PM            404 @VpnToastIcon.png
+-a----     07-12-2019  02:39:32 PM         195443 @windows-hello-V4.1.gif
+-a----     07-12-2019  02:39:32 PM            714 @WindowsHelloFaceToastIcon.png
+-a----     07-12-2019  02:38:39 PM            518 @WindowsUpdateToastIcon.contrast-black.png
+-a----     07-12-2019  02:38:39 PM            810 @WindowsUpdateToastIcon.contrast-white.png
+-a----     07-12-2019  02:38:39 PM            518 @WindowsUpdateToastIcon.png
+-a----     07-12-2019  02:38:19 PM            691 @WirelessDisplayToast.png
+-a----     07-12-2019  02:39:05 PM            402 @WLOGO_48x48.png
+-a----     19-10-2022  10:45:13 AM         488960 aadauthhelper.dll
+-a----     21-06-2023  10:54:27 AM        1107968 aadcloudap.dll
+-a----     19-03-2022  09:34:07 PM          98816 aadjcsp.dll
+-a----     17-05-2023  09:13:23 AM        1420288 aadtb.dll
+-a----     19-10-2022  10:45:13 AM         171856 aadWamExtension.dll
+-a----     17-08-2022  09:27:12 AM         461824 AarSvc.dll
+-a----     21-02-2022  08:44:27 AM         442224 AboutSettingsHandlers.dll
+-a----     21-06-2023  10:55:04 AM         418816 AboveLockAppHost.dll
+-a----     14-11-2021  11:58:45 AM         281088 accessibilitycpl.dll
+-a----     14-11-2021  12:00:05 PM         274432 accountaccessor.dll
+-a----     14-11-2021  12:00:05 PM         435712 AccountsRt.dll
+-a----     21-06-2023  10:55:28 AM         381952 AcGenral.dll
+-a----     21-06-2023  10:55:28 AM         333312 AcLayers.dll
+-a----     07-12-2019  02:39:34 PM          11264 acledit.dll
+-a----     07-12-2019  02:39:34 PM         587264 aclui.dll
+-a----     22-02-2023  08:32:21 AM         480608 acmigration.dll
+-a----     21-12-2022  10:53:36 AM         212992 ACPBackgroundManagerPolicy.dll
+-a----     14-11-2021  11:58:45 AM          88576 acppage.dll
+-a----     07-12-2019  02:39:37 PM          13312 acproxy.dll
+-a----     14-11-2021  11:59:50 AM          81408 AcSpecfc.dll
+-a----     14-11-2021  11:59:10 AM         322048 ActionCenter.dll
+-a----     14-11-2021  11:59:10 AM         166400 ActionCenterCPL.dll
+-a----     21-06-2023  10:55:07 AM         190848 ActionQueue.dll
+-a----     14-11-2021  11:58:32 AM          56320 ActivationClient.dll
+-a----     21-09-2022  08:28:29 AM         802816 ActivationManager.dll
+-a----     17-08-2022  09:27:56 AM         371448 ActivationVdev.dll
+-a----     14-11-2021  11:58:45 AM         274432 activeds.dll
+-a----     14-11-2021  11:58:45 AM         112128 activeds.tlb
+-a----     07-12-2019  02:38:39 PM           8321 ActiveHours.png
+-a----     14-11-2021  12:00:05 PM         103424 ActiveSyncCsp.dll
+-a----     14-11-2021  12:00:05 PM        1707520 ActiveSyncProvider.dll
+-a----     22-02-2023  08:32:29 AM         641024 actxprxy.dll
+-a----     22-02-2023  08:32:44 AM          68608 AcWinRT.dll
+-a----     21-06-2023  10:55:28 AM          15872 AcXtrnal.dll
+-a----     14-11-2021  11:58:30 AM          53248 AdaptiveCards.dll
+-a----     07-12-2019  02:38:33 PM          67584 AddressParser.dll
+-a----     07-12-2019  02:39:04 PM          24576 adhapi.dll
+-a----     14-11-2021  11:59:25 AM         100352 adhsvc.dll
+-a----     14-11-2021  11:59:59 AM         542208 AdmTmpl.dll
+-a----     21-09-2022  08:28:51 AM          60416 adprovider.dll
+-a----     14-11-2021  11:59:59 AM         136704 adrclient.dll
+-a----     14-11-2021  11:59:44 AM         262144 adsldp.dll
+-a----     14-11-2021  11:58:45 AM         258560 adsldpc.dll
+-a----     07-12-2019  02:39:34 PM         104960 adsmsext.dll
+-a----     07-12-2019  02:39:34 PM         364032 adsnt.dll
+-a----     19-04-2023  10:36:49 AM         866816 adtschema.dll
+-a----     14-11-2021  11:58:24 AM         168448 AdvancedEmojiDS.dll
+-a----     17-05-2023  09:13:18 AM         704552 advapi32.dll
+-a----     07-12-2019  02:38:13 PM           2560 advapi32res.dll
+-a----     07-12-2019  02:38:55 PM         151552 advpack.dll
+-a----     07-12-2019  02:38:45 PM          30720 aeevts.dll
+-a----     14-11-2021  11:58:45 AM         852296 aeinv.dll
+-a----     14-11-2021  11:58:48 AM         598344 aepic.dll
+-a----     17-08-2022  09:27:12 AM         908800 agentactivationruntime.dll
+-a----     14-11-2021  11:58:25 AM          13312 agentactivationruntimestarter.exe
+-a----     22-03-2023  11:15:26 AM         884224 agentactivationruntimewindows.dll
+-a----     21-06-2023  10:55:36 AM        1220096 AgentService.exe
+-a----     14-11-2021  11:58:45 AM        3232056 aitstatic.exe
+-a----     07-12-2019  02:38:22 PM          26112 AJRouter.dll
+-a----     14-11-2021  11:58:41 AM          95744 alg.exe
+-a----     07-12-2019  02:39:34 PM         162816 altspace.dll
+-a----     07-12-2019  01:25:00 AM          18944 amcompat.tlb
+-a----     19-10-2022  10:45:11 AM         103936 amsi.dll
+-a----     19-10-2022  10:45:11 AM          14848 amsiproxy.dll
+-a----     14-11-2021  11:59:48 AM         100864 amstream.dll
+-a----     14-11-2021  12:00:03 PM         219648 Analog.Shell.Broker.dll
+-a----     07-12-2019  02:39:51 PM          31232 AnalogCommonProxyStub.dll
+-a----     14-11-2021  11:59:44 AM         256512 apds.dll
+-a----     14-11-2021  12:00:05 PM          72192 APHostClient.dll
+-a----     06-12-2019  10:05:00 PM          16384 APHostRes.dll
+-a----     14-11-2021  12:00:05 PM         351744 APHostService.dll
+-a----     14-11-2021  11:58:45 AM         248832 apisampling.dll
+-a----     19-07-2022  09:47:59 AM         111616 ApiSetHost.AppExecutionAlias.dll
+-a----     21-06-2023  10:54:24 AM         129408 apisetschema.dll
+-a----     20-07-2022  09:50:27 AM        1640960 APMon.dll
+-a----     20-07-2022  09:50:27 AM          57344 APMonUI.dll
+-a----     19-03-2022  09:33:53 PM         910632 AppContracts.dll
+-a----     14-11-2021  11:58:31 AM         208896 AppExtension.dll
+-a----     17-05-2023  09:13:50 AM         576512 apphelp.dll
+-a----     14-11-2021  11:58:45 AM          34816 Apphlpdm.dll
+-a----     14-11-2021  11:58:31 AM         120320 AppHostRegistrationVerifier.exe
+-a----     22-03-2023  11:15:39 AM          73576 appidapi.dll
+-a----     22-03-2023  11:15:39 AM          49152 appidcertstorecheck.exe
+-a----     22-03-2023  11:15:39 AM         160768 appidpolicyconverter.exe
+-a----     22-03-2023  11:16:04 AM         404992 AppIdPolicyEngineApi.dll
+-a----     22-03-2023  11:15:39 AM          85504 appidsvc.dll
+-a----     22-03-2023  11:15:39 AM          25600 appidtel.exe
+-a----     19-07-2022  09:48:00 AM         217600 appinfo.dll
+-a----     17-08-2022  09:27:34 AM          12288 appinfoext.dll
+-a----     14-11-2021  11:58:42 AM          49664 AppInstallerPrompt.Desktop.dll
+-a----     22-02-2023  08:32:10 AM         124416 ApplicationControlCSP.dll
+-a----     21-01-2022  07:09:18 PM         669184 ApplicationFrame.dll
+-a----     14-11-2021  11:58:43 AM          78456 ApplicationFrameHost.exe
+-a----     21-06-2023  10:54:24 AM          93184 AppListBackupLauncher.dll
+-a----     22-03-2023  11:15:39 AM         390144 AppLockerCSP.dll
+-a----     19-03-2022  09:35:05 PM        1157120 ApplySettingsTemplateCatalog.exe
+-a----     21-06-2023  10:55:05 AM        1208600 ApplyTrustOffline.exe
+-a----     14-11-2021  11:59:58 AM         150016 AppManagementConfiguration.dll
+-a----     14-11-2021  11:59:59 AM         207360 appmgmts.dll
+-a----     14-11-2021  11:59:59 AM         470016 appmgr.dll
+-a----     20-07-2022  09:50:52 AM         118784 AppMon.dll
+-a----     20-07-2022  09:50:10 AM         147456 AppointmentActivation.dll
+-a----     14-11-2021  11:58:39 AM         795136 AppointmentApis.dll
+-a----     22-02-2023  08:32:21 AM        2073952 appraiser.dll
+-a----     17-05-2023  09:15:02 AM         676352 AppReadiness.dll
+-a----     07-12-2019  02:38:45 PM          12800 apprepapi.dll
+-a----     02-05-2022  09:14:43 AM         583120 AppResolver.dll
+-a----     14-11-2021  11:58:26 AM         235008 ApproveChildRequest.exe
+-a----     07-12-2019  02:38:21 PM         198144 appsruprov.dll
+-a----     19-03-2022  09:35:04 PM         605552 AppVCatalog.dll
+-a----     22-03-2023  11:16:04 AM         777104 AppVClient.exe
+-a----     07-12-2019  03:23:49 PM         223744 AppvClientEventLog.dll
+-a----     22-02-2023  08:32:51 AM          42336 AppVClientPS.dll
+-a----     19-03-2022  09:35:04 PM         177000 AppVDllSurrogate.exe
+-a----     19-03-2022  09:35:04 PM         737616 AppVEntStreamingManager.dll
+-a----     21-06-2023  10:55:36 AM        1260880 AppVEntSubsystemController.dll
+-a----     21-06-2023  10:55:36 AM        2024272 AppVEntSubsystems64.dll
+-a----     19-10-2022  10:46:03 AM        1589080 AppVEntVirtualization.dll
+-a----     19-03-2022  09:35:04 PM         133120 appvetwclientres.dll
+-a----     07-12-2019  03:23:49 PM         223744 appvetwsharedperformance.dll
+-a----     19-03-2022  09:35:04 PM          13312 appvetwstreamingux.dll
+-a----     19-03-2022  09:35:04 PM         251208 AppVFileSystemMetadata.dll
+-a----     19-03-2022  09:35:04 PM        1440112 AppVIntegration.dll
+-a----     19-03-2022  09:35:04 PM         895336 AppVManifest.dll
+-a----     19-03-2022  09:35:04 PM         168272 AppVNice.exe
+-a----     19-03-2022  09:35:04 PM         740184 AppVOrchestration.dll
+-a----     19-03-2022  09:35:04 PM         971120 AppVPolicy.dll
+-a----     19-03-2022  09:35:04 PM         576880 AppVPublishing.dll
+-a----     19-03-2022  09:35:04 PM         670064 AppVReporting.dll
+-a----     19-03-2022  09:35:04 PM         366408 AppVScripting.dll
+-a----     22-02-2023  08:32:52 AM          16736 AppVSentinel.dll
+-a----     19-03-2022  09:35:04 PM         221032 AppVShNotify.exe
+-a----     19-03-2022  09:35:04 PM         196440 AppVStreamingUX.dll
+-a----     19-03-2022  09:35:04 PM         223560 AppVStreamMap.dll
+-a----     22-02-2023  08:32:51 AM          20816 AppVTerminator.dll
+-a----     14-11-2021  11:59:44 AM         595968 appwiz.cpl
+-a----     21-06-2023  10:55:05 AM         381760 AppxAllUserStore.dll
+-a----     21-06-2023  10:55:05 AM         210944 AppXApplicabilityBlob.dll
+-a----     14-11-2021  11:58:30 AM         239432 AppxApplicabilityEngine.dll
+-a----     21-06-2023  10:54:54 AM        1062976 AppXDeploymentClient.dll
+-a----     21-06-2023  10:55:05 AM        1774080 AppXDeploymentExtensions.desktop.dll
+-a----     21-06-2023  10:55:05 AM        2496000 AppXDeploymentExtensions.onecore.dll
+-a----     21-06-2023  10:55:05 AM        3928576 AppXDeploymentServer.dll
+-a----     19-04-2023  10:36:43 AM        1838976 AppxPackaging.dll
+-a----     07-12-2019  02:38:41 PM           3232 AppxProvisioning.xml
+-a----     19-04-2023  10:36:43 AM         300544 AppxSip.dll
+-a----     07-12-2019  02:38:33 PM          23040 AppxStreamingDataSourcePS.dll
+-a----     21-06-2023  10:55:05 AM         131072 AppxSysprep.dll
+-a----     21-01-2022  07:09:34 PM         681472 archiveint.dll
+-a----     07-12-2019  02:39:34 PM          26624 ARP.EXE
+-a----     07-12-2019  02:40:11 PM           2560 asferror.dll
+-a----     07-12-2019  02:40:34 PM          33552 aspnet_counters.dll
+-a----     19-07-2022  09:48:50 AM         479744 AssignedAccessCsp.dll
+-a----     19-07-2022  09:48:49 AM         103936 AssignedAccessGuard.exe
+-a----     19-07-2022  09:48:50 AM         599552 AssignedAccessManager.dll
+-a----     22-02-2023  08:32:52 AM         896000 assignedaccessmanagersvc.dll
+-a----     07-12-2019  03:23:46 PM          10240 assignedaccessproviderevents.dll
+-a----     14-11-2021  11:58:30 AM          59904 AssignedAccessRuntime.dll
+-a----     19-04-2023  10:37:10 AM         119808 AssignedAccessShellProxy.dll
+-a----     07-12-2019  02:39:05 PM          89600 asycfilt.dll
+-a----     07-12-2019  02:39:00 PM          31232 at.exe
+-a----     14-11-2021  11:58:45 AM          92672 AtBroker.exe
+-a----     14-11-2021  11:58:29 AM          99840 atl.dll
+-a----     11-06-2011  01:45:38 PM         158536 atl100.dll
+-a----     10-06-2013  04:29:36 AM         192584 atl110.dll
+-a----     14-11-2021  11:58:29 AM          40960 atlthunk.dll
+-a----     19-10-2022  10:45:31 AM          48640 atmlib.dll
+-a----     07-12-2019  04:49:14 PM          37888 AttestationWmiProvider.dll
+-a----     07-12-2019  02:39:33 PM          23040 attrib.exe
+-a----     17-08-2022  09:27:13 AM         632808 audiodg.exe
+-a----     17-08-2022  09:27:13 AM         745984 AudioEndpointBuilder.dll
+-a----     17-08-2022  09:27:12 AM        2108912 AudioEng.dll
+-a----     14-11-2021  11:59:25 AM         369152 AudioHandlers.dll
+-a----     17-08-2022  09:27:13 AM         421032 AUDIOKSE.dll
+-a----     17-08-2022  09:27:13 AM          56320 audioresourceregistrar.dll
+-a----     21-12-2022  10:53:32 AM        1568176 AudioSes.dll
+-a----     17-08-2022  09:27:13 AM        1836544 audiosrv.dll
+-a----     17-08-2022  09:27:13 AM         349136 AudioSrvPolicyManager.dll
+-a----     07-12-2019  02:39:09 PM         208384 auditcse.dll
+-a----     07-12-2019  03:23:55 PM         223744 AuditNativeSnapIn.dll
+-a----     14-11-2021  11:59:43 AM          41984 auditpol.exe
+-a----     14-11-2021  11:59:43 AM          80384 auditpolcore.dll
+-a----     14-11-2021  11:59:59 AM          75264 AuditPolicyGPInterop.dll
+-a----     07-12-2019  03:23:55 PM          95744 auditpolmsg.dll
+-a----     19-10-2022  10:45:14 AM         216576 AuthBroker.dll
+-a----     14-11-2021  11:58:29 AM         112640 AuthBrokerUI.dll
+-a----     14-11-2021  11:59:42 AM          54272 authentication.dll
+-a----     14-11-2021  11:59:27 AM          51712 AuthExt.dll
+-a----     17-05-2023  09:14:27 AM         561152 authfwcfg.dll
+-a----     17-05-2023  09:14:03 AM          33280 AuthFWGP.dll
+-a----     17-05-2023  09:14:02 AM        5108736 AuthFWSnapin.dll
+-a----     17-05-2023  09:14:03 AM         112640 AuthFWWizFwk.dll
+-a----     14-11-2021  11:58:29 AM         139960 AuthHost.exe
+-a----     07-12-2019  02:38:19 PM          19456 AuthHostProxy.dll
+-a----     17-05-2023  09:14:13 AM         286720 authui.dll
+-a----     17-05-2023  09:13:53 AM         297472 authz.dll
+-a----     14-11-2021  11:58:47 AM         972800 autochk.exe
+-a----     14-11-2021  11:59:44 AM         947200 autoconv.exe
+-a----     14-11-2021  11:59:44 AM         921088 autofmt.exe
+-a----     19-04-2023  10:36:24 AM         197120 autopilot.dll
+-a----     22-03-2023  11:15:26 AM          27136 autopilotdiag.dll
+-a----     14-11-2021  11:59:44 AM         206336 autoplay.dll
+-a----     14-11-2021  11:59:42 AM         114176 autotimesvc.dll
+-a----     07-12-2019  02:38:07 PM         138092 AverageRoom.bin
+-a----     07-12-2019  02:39:47 PM          84480 avicap32.dll
+-a----     07-12-2019  02:39:47 PM         118784 avifil32.dll
+-a----     14-11-2021  11:58:25 AM          30480 avrt.dll
+-a----     14-11-2021  11:59:15 AM         116736 AxInstSv.dll
+-a----     14-11-2021  11:59:15 AM          60928 AxInstUI.exe
+-a----     07-12-2019  02:39:46 PM          41587 azman.msc
+-a----     14-11-2021  11:59:44 AM         634880 azroles.dll
+-a----     14-11-2021  11:59:48 AM         447488 azroleui.dll
+-a----     07-12-2019  02:39:34 PM          32256 AzSqlExt.dll
+-a----     20-07-2022  09:50:21 AM        1952256 AzureSettingSyncProvider.dll
+-a----     07-12-2019  03:23:53 PM         113152 baaupdate.exe
+-a----     14-11-2021  11:58:42 AM          71680 BackgroundMediaPolicy.dll
+-a----     14-11-2021  11:58:33 AM          19776 backgroundTaskHost.exe
+-a----     14-11-2021  11:58:32 AM          37376 BackgroundTransferHost.exe
+-a----     07-12-2019  02:38:41 PM          15872 BamSettingsClient.dll
+-a----     22-03-2023  11:15:26 AM          92160 BarcodeProvisioningPlugin.dll
+-a----     07-12-2019  02:39:09 PM         210232 basecsp.dll
+-a----     21-12-2022  10:53:47 AM          72192 basesrv.dll
+-a----     21-12-2022  10:54:09 AM          87552 bash.exe
+-a----     07-12-2019  02:38:13 PM          41472 batmeter.dll
+-a----     07-12-2019  02:38:19 PM         261632 bcastdvr.proxy.dll
+-a----     14-11-2021  11:58:29 AM         111616 BcastDVRBroker.dll
+-a----     14-11-2021  11:58:29 AM         492544 BcastDVRClient.dll
+-a----     14-11-2021  11:58:29 AM         244736 BcastDVRCommon.dll
+-a----     20-07-2022  09:50:41 AM        1384960 bcastdvruserservice.dll
+-a----     14-11-2021  11:58:49 AM         130144 bcd.dll
+-a----     14-11-2021  11:58:25 AM         248320 bcdboot.exe
+-a----     19-10-2022  10:45:10 AM         492416 bcdedit.exe
+-a----     07-12-2019  02:38:07 PM          79872 bcdprov.dll
+-a----     07-12-2019  02:38:07 PM          87552 bcdsrv.dll
+-a----     19-03-2022  09:34:05 PM         362080 BCP47Langs.dll
+-a----     21-02-2022  08:44:16 AM         176672 BCP47mrm.dll
+-a----     18-01-2023  08:28:54 AM         147800 bcrypt.dll
+-a----     18-01-2023  08:28:57 AM         527904 bcryptprimitives.dll
+-a----     07-12-2019  02:39:51 PM         100864 bdaplgin.ax
+-a----     02-05-2022  09:15:20 AM         382464 bdechangepin.exe
+-a----     07-12-2019  03:23:46 PM         134144 BdeHdCfg.exe
+-a----     07-12-2019  03:23:46 PM         105984 BdeHdCfgLib.dll
+-a----     07-12-2019  03:23:50 PM          50688 bderepair.dll
+-a----     19-04-2023  10:37:20 AM         557056 bdesvc.dll
+-a----     07-12-2019  03:23:51 PM          11776 BdeSysprep.dll
+-a----     02-05-2022  09:15:20 AM          35840 bdeui.dll
+-a----     19-04-2023  10:37:20 AM          55808 BdeUISrv.exe
+-a----     14-11-2021  12:00:10 PM         286656 bdeunlock.exe
+-a----     21-06-2023  10:54:54 AM         892928 BFE.DLL
+-a----     07-12-2019  02:38:24 PM          30720 bi.dll
+-a----     20-07-2022  09:50:01 AM          67072 bidispl.dll
+-a----     18-01-2023  08:28:53 AM         103936 bindfltapi.dll
+-a----     14-11-2021  11:59:20 AM         358400 BingASDS.dll
+-a----     14-11-2021  11:59:20 AM          99328 BingFilterDS.dll
+-a----     21-06-2023  10:54:53 AM        9037312 BingMaps.dll
+-a----     07-12-2019  02:38:27 PM         706560 BingOnlineServices.dll
+-a----     19-03-2022  09:34:07 PM         378368 BioCredProv.dll
+-a----     01-06-2022  10:24:45 AM         745952 BioIso.exe
+-a----     20-07-2022  09:50:08 AM         847872 bisrv.dll
+-a----     17-05-2023  09:14:01 AM         268800 BitLockerCsp.dll
+-a----     17-08-2022  09:28:17 AM         178176 BitLockerDeviceEncryption.exe
+-a----     02-05-2022  09:15:20 AM         102400 BitLockerWizard.exe
+-a----     02-05-2022  09:15:20 AM         102400 BitLockerWizardElev.exe
+-a----     07-12-2019  02:38:46 PM         211456 bitsadmin.exe
+-a----     07-12-2019  02:38:46 PM          78336 bitsigd.dll
+-a----     07-12-2019  02:38:22 PM          31744 bitsperf.dll
+-a----     07-12-2019  02:38:22 PM          67584 BitsProxy.dll
+-a----     19-03-2022  09:33:59 PM         333696 biwinrt.dll
+-a----     07-12-2019  02:40:32 PM          77824 BlbEvents.dll
+-a----     07-12-2019  02:40:45 PM           2560 blbres.dll
+-a----     07-12-2019  02:40:45 PM          66560 blb_ps.dll
+-a----     14-11-2021  11:58:41 AM         202240 BluetoothApis.dll
+-a----     14-11-2021  11:59:25 AM          67072 BluetoothDesktopHandlers.dll
+-a----     07-12-2019  02:38:05 PM           8495 BluetoothPairingSystemToastIcon.contrast-b
+                                                  lack.png
+-a----     07-12-2019  02:38:05 PM           8736 BluetoothPairingSystemToastIcon.contrast-h
+                                                  igh.png
+-a----     07-12-2019  02:38:05 PM           8495 BluetoothPairingSystemToastIcon.contrast-w
+                                                  hite.png
+-a----     07-12-2019  02:38:05 PM           8541 BluetoothPairingSystemToastIcon.png
+-a----     07-12-2019  02:38:05 PM           1320 BluetoothSystemToastIcon.contrast-white.pn
+                                                  g
+-a----     07-12-2019  02:38:05 PM           1229 BluetoothSystemToastIcon.png
+-a----     14-11-2021  11:58:24 AM          26112 bnmanager.dll
+-a----     07-12-2019  02:38:41 PM        3170304 boot.sdi
+-a----     07-12-2019  02:38:07 PM          97280 bootcfg.exe
+-a----     14-11-2021  12:00:10 PM          26624 bootim.exe
+-a----     16-11-2022  11:10:38 AM         360448 BootMenuUX.dll
+-a----     07-12-2019  02:38:07 PM         110392 bootsect.exe
+-a----     07-12-2019  02:38:46 PM          11576 bootstr.dll
+-a----     14-11-2021  12:00:10 PM        3993088 bootux.dll
+-a----     07-12-2019  02:38:46 PM          25912 BOOTVID.DLL
+-a----     07-12-2019  02:39:47 PM          22984 bopomofo.uce
+-a----     07-12-2019  02:39:39 PM           2560 bridgeres.dll
+-a----     07-12-2019  02:39:39 PM          20992 bridgeunattend.exe
+-a----     19-03-2022  09:34:06 PM         276480 BrokerLib.dll
+-a----     02-05-2022  09:14:29 AM          58880 browcli.dll
+-a----     16-11-2022  11:10:31 AM         287616 browserbroker.dll
+-a----     07-12-2019  02:38:46 PM         140800 browserexport.exe
+-a----     14-11-2021  11:58:27 AM         149504 BrowserSettingSync.dll
+-a----     07-12-2019  02:38:46 PM          47928 browser_broker.exe
+-a----     07-12-2019  02:39:07 PM          14848 browseui.dll
+-a----     14-11-2021  11:58:24 AM        1023488 BTAGService.dll
+-a----     02-05-2022  09:14:28 AM         391168 BthAvctpSvc.dll
+-a----     14-11-2021  11:58:24 AM         343040 BthAvrcp.dll
+-a----     14-11-2021  11:58:24 AM          63488 BthAvrcpAppSvc.dll
+-a----     07-12-2019  02:38:46 PM         118272 bthci.dll
+-a----     07-12-2019  02:39:37 PM          34304 BthMtpContextHandler.dll
+-a----     07-12-2019  02:38:46 PM          31744 bthpanapi.dll
+-a----     14-11-2021  11:58:46 AM         190976 BthpanContextHandler.dll
+-a----     14-11-2021  11:58:46 AM         266752 bthprops.cpl
+-a----     14-11-2021  11:58:41 AM         107520 BthRadioMedia.dll
+-a----     07-12-2019  02:38:36 PM         213504 bthserv.dll
+-a----     07-12-2019  02:38:36 PM          30208 BthTelemetry.dll
+-a----     07-12-2019  02:38:46 PM          40448 bthudtask.exe
+-a----     14-11-2021  11:58:46 AM         125952 btpanui.dll
+-a----     07-12-2019  02:39:46 PM         809472 Bubbles.scr
+-a----     14-11-2021  11:59:44 AM          67072 BWContextHandler.dll
+-a----     19-03-2022  09:34:05 PM          82432 ByteCodeGenerator.exe
+-a----     07-12-2019  04:49:14 PM          12088 c28c7a4e-a619-4463-82b7-0fc9cc7187f5_Hyper
+                                                  V-ComputeStorage.dll
+-a----     07-12-2019  04:49:14 PM          12600 c4d66f00-b6f0-4439-ac9b-c5ea13fe54d7_Hyper
+                                                  V-ComputeCore.dll
+-a----     07-12-2019  02:38:46 PM         104448 cabapi.dll
+-a----     14-11-2021  11:58:47 AM         147232 cabinet.dll
+-a----     07-12-2019  02:38:46 PM         169984 cabview.dll
+-a----     07-12-2019  02:39:51 PM          34304 cacls.exe
+-a----     07-12-2019  02:39:47 PM          27648 calc.exe
+-a----     14-11-2021  11:58:25 AM          89600 CallButtons.dll
+-a----     07-12-2019  02:38:07 PM          28160 CallButtons.ProxyStub.dll
+-a----     14-11-2021  11:58:39 AM         176128 CallHistoryClient.dll
+-a----     14-11-2021  11:58:32 AM         131584 CameraCaptureUI.dll
+-a----     14-11-2021  12:00:02 PM          32528 CameraSettingsUIHost.exe
+-a----     02-05-2022  09:14:33 AM          65024 CapabilityAccessHandlers.dll
+-a----     14-11-2021  11:58:33 AM         391168 CapabilityAccessManager.dll
+-a----     14-11-2021  11:58:33 AM         242688 CapabilityAccessManagerClient.dll
+-a----     14-11-2021  11:58:32 AM         318736 capauthz.dll
+-a----     21-09-2022  08:28:51 AM          64000 capiprovider.dll
+-a----     07-12-2019  02:38:52 PM          26624 capisp.dll
+-a----     14-11-2021  11:58:47 AM         130560 CaptureService.dll
+-a----     14-11-2021  12:00:02 PM          91136 CastingShellExt.dll
+-a----     14-11-2021  11:59:44 AM          96768 CastLaunch.dll
+-a----     14-11-2021  11:59:44 AM          62504 CastSrv.exe
+-a----     22-02-2023  08:32:22 AM         478720 catsrv.dll
+-a----     07-12-2019  02:38:46 PM          48128 catsrvps.dll
+-a----     14-11-2021  11:58:47 AM         522240 catsrvut.dll
+-a----     21-02-2022  08:44:37 AM        1025024 CBDHSvc.dll
+-a----     07-12-2019  02:39:51 PM          92672 cca.dll
+-a----     14-11-2021  11:59:59 AM         150528 CCG.exe
+-a----     14-11-2021  11:59:59 AM          59392 CCGLaunchPad.dll
+-a----     05-04-2023  09:08:52 AM        2177432 ccmcore.dll
+-a----     05-05-2023  11:23:05 AM            621 CcmFramework.h
+-a----     05-05-2023  11:23:05 AM           4764 CcmFramework.ini
+-a----     05-04-2023  09:40:30 AM         128968 ccmperf.dll
+-a----     05-04-2023  09:46:56 AM          91080 CcmUsrCse.dll
+-a----     17-05-2023  09:13:24 AM         267264 cdd.dll
+-a----     14-11-2021  11:59:47 AM        1080832 cdosys.dll
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> pwd
+
+Path
+----
+C:\WINDOWS\system32
+
+
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> cd C:\Users\lmanoh572\Documents\
+PS C:\Users\lmanoh572\Documents>
+PS C:\Users\lmanoh572\Documents> mkdir DockerSession
+
+
+    Directory: C:\Users\lmanoh572\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     19-07-2023  04:51:06 PM                DockerSession
+
+
+PS C:\Users\lmanoh572\Documents> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     10-10-2022  02:42:01 PM                ActivePresenter
+d-----     10-10-2022  02:42:08 PM                ActivePresenter Templates
+d-----     16-05-2023  02:36:17 PM                Alagumalai_Docs
+d-----     10-05-2023  07:05:16 PM                Amma_Mediclaim
+d-----     21-08-2022  08:07:38 PM                Appium_Udemy
+d-----     23-07-2021  12:22:34 PM                application
+d-----     04-02-2022  09:16:47 PM                Automatics3.0_Enhancement_Updates
+d-----     25-01-2022  07:32:57 PM                Automatics_Analytics_Dashboard_2
+d-----     31-07-2022  07:08:54 PM                Basic_HTML
+d-----     15-09-2021  01:09:24 PM                Blogging
+d-----     26-07-2021  12:31:59 PM                BookSpeedment
+d-----     23-07-2021  12:06:59 PM                BookstoreSpeedment
+d-----     05-12-2022  08:29:28 PM                BSNL_Payment_Receipts
+d-----     08-06-2022  06:50:04 PM                Certification_By_CIEC
+d-----     22-10-2022  11:20:41 AM                Comcast-Oct-22-master
+d-----     01-05-2023  11:30:23 AM                CSS_Practices
+d-----     28-01-2021  11:06:20 AM                Custom Office Templates
+d-----     19-07-2023  04:51:06 PM                DockerSession
+d-----     15-08-2021  03:45:02 PM                Docker_Tutorial
+d-----     01-12-2021  04:24:30 PM                Drag_&_Drop_JS
+d-----     26-05-2023  09:23:31 AM                Dump20230517_1dot0
+d-----     11-05-2023  05:23:13 PM                dumps
+d-----     14-08-2021  06:09:23 PM                eclipse-master-workspace
+d-----     30-09-2021  03:01:16 PM                eclipse-service-ws
+d-----     02-06-2021  04:58:54 PM                eclipse-workspace
+d-----     03-11-2021  12:23:12 PM                eclipse-workspace-ecats
+d-----     26-07-2021  03:01:58 PM                eclipse-workspace-neon-2
+d-----     16-09-2021  11:54:13 AM                Eclipse_Shortcut
+d-----     02-07-2023  08:36:49 PM                ELK_Project
+d-----     19-08-2021  04:08:45 PM                extractTGZjs
+d-----     08-09-2022  06:40:20 PM                Flow_Chart_Using_GO_JS
+d-----     22-06-2022  12:54:26 PM                Formatter_Java(XRE_Automation_Formatter)
+d-----     27-06-2022  06:46:44 PM                Form_16_Validated
+d-----     01-11-2022  04:58:50 PM                Git_Assignment
+d-----     17-06-2021  01:14:04 PM                Intern_Project
+d-----     19-06-2023  05:25:09 PM                ITR_JUN_2023
+d-----     11-10-2022  07:36:49 PM                jdk1.8.0_291
+d-----     11-10-2022  07:36:43 PM                jre1.8.0_291
+d-----     03-11-2022  10:18:11 AM                JS_CSS_Lib_Files
+d-----     25-06-2022  10:45:10 AM                Kamalesh_Applications&Docs
+d-----     02-06-2023  12:27:38 PM                Kamalesh_Counselling
+d-----     14-03-2022  07:49:55 PM                Lab_Week_OCT2021
+d-----     11-02-2022  06:15:47 PM                LinkedIn_Learnings
+d-----     16-01-2023  03:16:35 PM                local_Services
+d-----     08-11-2022  06:19:16 PM                logbash-service-dev
+d-----     08-11-2022  06:20:13 PM                logbash-service-dev.tar
+d-----     08-11-2022  06:19:48 PM                logbash-service-prod
+d-----     08-11-2022  06:19:57 PM                logbash-service-prod.tar
+d-----     26-08-2022  11:50:12 PM                Logesh_Hair_Treatment
+d-----     12-08-2022  12:57:07 PM                logs
+d-----     11-06-2023  01:49:44 PM                M.Tech
+d-----     23-05-2022  05:40:41 PM                Meal Card Enrollment
+d-----     15-01-2022  09:05:29 PM                Microservices_Udemy
+d-----     18-08-2022  01:01:13 PM                MongoDB_Training
+d-----     11-06-2023  11:02:06 PM                My Tableau Repository
+d-----     06-05-2023  05:41:29 PM                M_TECH_Courses
+d-----     24-03-2022  05:38:23 PM                National_Pension_Scheme
+d-----     01-10-2021  06:34:07 PM                OneNote Notebooks
+d-----     15-01-2023  12:50:22 PM                OpenSourceSpeedment
+d-----     18-04-2021  05:11:29 PM                OUP
+d-----     14-02-2022  10:10:29 AM                Outlook Files
+d-----     14-07-2023  03:34:34 PM                PostMan_Endpoints
+d-----     25-07-2021  07:09:04 PM                procanalyzer-ds
+d-----     15-07-2021  01:38:32 PM                Procspring
+d-r---     18-11-2022  10:15:26 AM                PROC_ANALYZER
+d-----     26-03-2021  02:52:01 PM                Python Scripts
+d-----     23-10-2022  11:13:00 AM                PythonAdv_Flask_Practice
+d-----     08-11-2022  02:41:24 PM                PythonCoreProject
+d-----     07-03-2022  08:15:17 AM                rack-orchestration-master
+d-----     07-03-2022  08:15:43 AM                rack-orchestration-stable2
+d-----     02-02-2022  02:24:32 PM                Raptor-API
+d-----     30-03-2022  01:29:10 PM                sample-npm
+d-----     04-04-2022  01:13:21 PM                SchedulerService
+d-----     25-05-2021  09:48:51 AM                Screencast-O-Matic
+d-----     29-07-2022  06:58:15 PM                Selenium_Web_Driver_UDEMY
+d-----     05-10-2021  10:24:40 AM                Services-Stable2
+d-----     14-07-2021  12:05:16 PM                source_file
+d-----     22-07-2021  11:22:34 AM                SpringSpeedment
+d-----     01-04-2022  06:52:09 PM                StabilityJobManagerService
+d-----     03-08-2022  02:04:59 PM                sts-rdkc_device_service
+d-----     26-06-2023  06:29:08 PM                sts_confluenceservice
+d-----     06-08-2022  02:36:05 PM                sts_core_java
+d-----     13-01-2023  01:23:51 PM                sts_crashanalysis
+d-----     15-01-2023  02:51:42 PM                sts_local_services
+d-----     08-11-2022  08:49:20 PM                sts_logbash_service
+d-----     08-02-2022  03:50:48 PM                sts_notificationservice
+d-----     11-01-2023  03:11:43 PM                sts_predefinedDs
+d-----     14-03-2023  08:13:42 PM                sts_procanalyzerservice
+d-----     05-01-2023  11:57:40 AM                sts_rackdataservices
+d-----     04-01-2023  02:10:26 PM                sts_schedulerservice
+d-----     21-01-2022  11:55:41 AM                sts_speedment_generation
+d-----     20-01-2023  01:33:18 PM                sts_stability2dotService
+d-----     14-03-2023  07:57:52 PM                sts_stabilityjobmanager
+d-----     20-01-2023  01:32:02 PM                sts_usermanagementservice
+d-----     18-07-2023  01:57:41 PM                sts_workspace
+d-----     26-07-2021  05:40:47 PM                sts_workspace_2
+d-----     23-12-2022  07:31:29 PM                sts_ws_1dot0
+d-----     16-08-2021  06:51:13 PM                sts_ws_dev_services
+d-----     22-09-2021  11:54:24 AM                sts_ws_prod_services
+d-----     11-06-2023  08:14:10 PM                Tableau
+d-----     03-03-2022  08:26:17 PM                TEAM_LUNCH
+d-----     18-01-2023  08:34:33 AM                tmp_Scheduler
+d-----     17-01-2023  04:29:21 PM                tmp_SJMS
+d-----     19-08-2022  02:05:47 PM                TNEA_Counselling_Kamalesh
+d-----     19-11-2021  12:50:11 PM                TRAININGS
+d-----     13-01-2022  11:19:37 AM                TypeScript_Udemy
+d-----     22-10-2022  06:47:09 PM                Untitled Folder
+d-----     11-08-2022  09:38:04 AM                vue-app
+d-----     22-07-2021  12:31:09 PM                workspace-spring-tool-suite-4-4.10.0.RELEA
+                                                  SE
+d-----     24-02-2021  06:19:47 PM                Yellow_Belt_Training
+-a----     28-04-2023  03:27:05 PM         110613 10400558_Payslip_Apr2023.pdf
+-a----     06-09-2022  09:17:51 PM         816114 Appa_Bill_1.png
+-a----     06-09-2022  09:18:23 PM         669634 Appa_Bill_2.png
+-a----     06-09-2022  09:19:01 PM         838719 Appa_Bill_3.png
+-a----     06-09-2022  09:21:52 PM         279265 Appa_Bill_4.png
+-a----     10-09-2022  05:52:43 PM        1266812 Appa_eco.pdf
+-a----     06-09-2022  09:22:26 PM         702247 Appa_Lab_Test.png
+-a----     06-09-2022  09:23:03 PM         658162 Appa_Prescription.png
+-a----     23-07-2021  04:53:31 PM           1257 BookSpeedment.zip
+-a----     04-03-2022  11:20:46 AM         142829 Brain_Game.pptx
+-a----     04-08-2022  02:30:05 PM           2481 C089ABEFEE71_CPAstats_08-04-22-08-57AM.tgz
+-a----     06-09-2022  09:23:27 PM         440674 ChequeCancelled.pdf
+-a----     16-06-2023  03:17:35 PM          70812 CIEC Open Requirements_14th June 2023.xlsx
+-a----     21-10-2022  10:23:56 AM          45218 Comcast-Oct-22-master.zip
+-a----     01-09-2022  03:16:54 PM         526538 device_config_result.txt
+-a----     05-02-2021  12:27:37 PM          30860 Domain_Documents_Notes.docx
+-a----     26-07-2021  06:57:12 PM            780 Downloads - Shortcut.lnk
+-a----     21-10-2021  04:35:12 PM           4828 Dump20211021.sql
+-a----     18-05-2023  12:49:40 PM       35173182 Dump20230517_1dot0.zip
+-a----     07-05-2023  02:26:14 PM          10798 E2_Compenstaion.xlsx
+-a----     04-04-2023  12:45:59 PM            155 E2_Promotion_Pay.txt
+-a----     20-08-2022  11:36:51 AM         273506 Ecard10400558.pdf
+-a----     24-02-2022  12:10:25 PM       61950833 Execution_Log_27756.pdf
+-a----     21-11-2022  12:41:45 PM         296757 How to create a ticket for IT issues.pdf
+-a----     18-05-2023  12:06:16 PM         299135 How to Submit Reimbursement Claims.pptx
+-a----     11-03-2022  08:28:42 PM         615259 Increment_April.pdf
+-a----     01-04-2022  01:57:00 PM            696 Increment_April_2022_Phase2.txt
+-a----     11-10-2022  07:37:52 PM       97211788 Java.7z
+-a----     24-11-2022  04:52:20 PM             36 Java_Snippet.txt
+-a----     22-11-2022  01:34:34 PM           2298 JShell_Notes.txt
+-a----     15-03-2022  07:31:29 PM         240011 Karthikeyan
+                                                  Pandarinatan_salary_revision.pdf
+-a----     29-01-2021  05:26:03 PM          32522 L0.xlsx
+-a----     03-02-2021  10:08:57 AM          72203 L1.xlsx
+-a----     08-11-2022  06:06:21 PM          74791 logbash-service-dev.tar.gz
+-a----     08-11-2022  06:15:11 PM          71995 logbash-service-prod.tar.gz
+-a----     24-08-2022  09:55:59 PM          98339 Logesh.pdf
+-a----     06-09-2022  09:47:09 PM        1270366 Logesh_Bill_1.png
+-a----     26-08-2022  11:31:43 PM        1191535 Logesh_MedicineBills.jpeg
+-a----     26-08-2022  11:29:52 PM         472990 Logesh_Prescription.jpeg
+-a----     01-02-2022  09:54:29 PM           4277 new 189.json
+-a----     30-08-2022  03:05:05 PM         102885 New Prepaid Card Application
+                                                  Form-induvidual (1).pdf
+-a----     15-09-2022  12:11:13 PM           2605 procanalyzer_requirement.txt
+-a----     19-01-2023  01:52:23 PM        2209585 Referring an Employee in WD -
+                                                  Guidelines.pptx
+-a----     08-09-2022  03:06:41 PM          28286 SampleDiagram.pdf
+-a----     15-12-2021  08:35:46 PM           5498 SingleStepInfo.txt
+-a----     13-07-2021  11:15:23 PM           3669 source_file.zip
+-a----     27-09-2022  10:18:28 AM       39196630 SpringSpeedment.zip
+-a----     28-01-2022  12:20:35 PM          48261 Talking_Points.pptx
+-a----     09-05-2023  03:09:21 PM       36136247 testManagerStabilityDEV_9MAY2023.sql
+-a----     16-01-2023  07:39:07 PM       29354877 testManagerStabilityDev_dump_16JAN2023.sql
+-a----     11-05-2023  05:54:35 PM         134584 test_manager_1dot0.sql
+-a----     11-05-2023  05:58:13 PM         169671 test_manager_1dot0_11MAY2023.sql
+-a----     11-05-2023  06:01:20 PM         134755 test_manager_stability_dump.sql
+
+
+PS C:\Users\lmanoh572\Documents> cd .\Docker_Tutorial\
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial>
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial>
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial> vi Dockerfile
+vi : The term 'vi' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that
+the path is correct and try again.
+At line:1 char:1
++ vi Dockerfile
++ ~~
+    + CategoryInfo          : ObjectNotFound: (vi:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial>
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial>
+PS C:\Users\lmanoh572\Documents\Docker_Tutorial> cd ..
+PS C:\Users\lmanoh572\Documents> .\DockerSession\
+.\DockerSession\ : The term '.\DockerSession\' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or if a path
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\DockerSession\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\DockerSession\:String) [], CommandNotFound
+   Exception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\lmanoh572\Documents> cd .\DockerSession\
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  04:52:11 PM              0 Dockerfile
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  04:54:45 PM            164 Dockerfile
+-a----     19-07-2023  04:54:35 PM             47 index.html
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker build . -t ubuntu-dockerfile-image:v1
+[+] Building 46.8s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                    0.0s
+ => => transferring dockerfile: 203B                                                    0.0s
+ => [internal] load .dockerignore                                                       0.0s
+ => => transferring context: 2B                                                         0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                        0.0s
+ => [1/4] FROM docker.io/library/ubuntu                                                 0.0s
+ => [internal] load build context                                                       0.0s
+ => => transferring context: 84B                                                        0.0s
+ => [2/4] RUN apt-get update -y                                                         9.9s
+ => [3/4] RUN apt-get install apache2 -y                                               35.3s
+ => [4/4] COPY index.html /var/www/html/index.html                                      0.1s
+ => exporting to image                                                                  1.3s
+ => => exporting layers                                                                 1.3s
+ => => writing image sha256:6cd8f2f98d9046d6e633c1c18847c92bba284323637a4d0cbea734bcf2  0.0s
+ => => naming to docker.io/library/ubuntu-dockerfile-image:v1                           0.0s
+PS C:\Users\lmanoh572\Documents\DockerSession> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED          SIZE
+ubuntu-dockerfile-image                   v1            6cd8f2f98d90   21 seconds ago   227MBuser-web-image                            v1            2cb1f27b8507   19 minutes ago   227MBnginx                                     latest        021283c8eb95   2 weeks ago      187MBubuntu                                    latest        5a81c4b8502e   3 weeks ago      77.8MB
+ubuntu                                    23.04         1ed313b0551f   4 weeks ago      70.3MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago    1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago    1.55GB
+mongo                                     latest        4253856b2570   20 months ago    701MBhello-docker                              latest        59c52b193990   23 months ago    112MBlogeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago    112MBPS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker run -itd --name ubuntu-dockerfile-container -p 6062:80 ubuntu-dockerfile-image:v1
+cce507d0a63773d7ee17f9545cf9edfe744f4e84680f9fa740a83e8bfbdb9384
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker containers
+docker: 'containers' is not a docker command.
+See 'docker --help'
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+f492f6d47997   user-web-image:v1   "/bin/bash"              21 minutes ago      Up 21 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest       "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04        "/bin/bash"              About an hour ago   Up About an hour                                           ubuntu-container
+dcfbbd4f700f   nginx               "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker run -itd --name ubuntu-dockerfile-container-1 -p 6064:80 ubuntu-dockerfile-image:v1
+b43193e180ef723c9da8cfe935239b76c124b59edac4c08d8ed698d049f58787
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+f492f6d47997   user-web-image:v1   "/bin/bash"              22 minutes ago      Up 22 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest       "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04        "/bin/bash"              About an hour ago   Up About an hour                                           ubuntu-container
+dcfbbd4f700f   nginx               "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED             STATUS                         PORTS                                   NAMES
+b43193e180ef   ubuntu-dockerfile-image:v1                "service apache2 sta…"   51 seconds ago      Exited (0) 49 seconds ago                                              ubuntu-dockerfile-container-1
+cce507d0a637   ubuntu-dockerfile-image:v1                "service apache2 sta…"   2 minutes ago       Exited (0) 2 minutes ago                                               ubuntu-dockerfile-container
+f492f6d47997   user-web-image:v1                         "/bin/bash"              22 minutes ago      Up 22 minutes                  0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest                             "/bin/bash"              About an hour ago   Up About an hour               0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04                              "/bin/bash"              About an hour ago   Up About an hour                                                       ubuntu-container
+dcfbbd4f700f   nginx                                     "/docker-entrypoint.…"   About an hour ago   Up About an hour               0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+09036399f9ff   nginx                                     "/docker-entrypoint.…"   About an hour ago   Exited (0) About an hour ago                                           nginx-container-1
+57c78a724337   nginx                                     "/docker-entrypoint.…"   2 hours ago         Exited (0) About an hour ago                                           nginx-container
+e57491f35154   automatics_analytics_dashboard_backend    "docker-entrypoint.s…"   20 months ago       Exited (0) 2 hours ago                                                 automaitcs-analytics-service
+9dd04b3ec476   mongo                                     "docker-entrypoint.s…"   20 months ago       Exited (0) 2 hours ago                                                 mongo
+2f921765c294   automatics_analytics_dashboard_frontend   "docker-entrypoint.s…"   20 months ago       Exited (0) 20 months ago                                               frontend
+9394e797bed8   hello-docker                              "docker-entrypoint.s…"   23 months ago       Exited (0) 23 months ago                                               practical_hawking
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  04:54:45 PM            164 Dockerfile
+-a----     19-07-2023  04:54:35 PM             47 index.html
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  05:12:26 PM            197 Dockerfile
+-a----     19-07-2023  04:54:35 PM             47 index.html
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker run -itd --name ubuntu-dockerfile-container-2 -p 6067:80 ubuntu-dockerfile-image:v1
+83870a2bc3fb5f731f8940ca334aca837fabc9f1102c9da231bae65f179b891e
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+f492f6d47997   user-web-image:v1   "/bin/bash"              36 minutes ago      Up 36 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest       "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04        "/bin/bash"              About an hour ago   Up About an hour                                           ubuntu-container
+dcfbbd4f700f   nginx               "/docker-entrypoint.…"   2 hours ago         Up 2 hours         0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED             STATUS                         PORTS                                   NAMES
+83870a2bc3fb   ubuntu-dockerfile-image:v1                "service apache2 sta…"   35 seconds ago      Exited (0) 32 seconds ago                                              ubuntu-dockerfile-container-2
+b43193e180ef   ubuntu-dockerfile-image:v1                "service apache2 sta…"   15 minutes ago      Exited (0) 15 minutes ago                                              ubuntu-dockerfile-container-1
+cce507d0a637   ubuntu-dockerfile-image:v1                "service apache2 sta…"   17 minutes ago      Exited (0) 17 minutes ago                                              ubuntu-dockerfile-container
+f492f6d47997   user-web-image:v1                         "/bin/bash"              37 minutes ago      Up 37 minutes                  0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest                             "/bin/bash"              About an hour ago   Up About an hour               0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04                              "/bin/bash"              About an hour ago   Up About an hour                                                       ubuntu-container
+dcfbbd4f700f   nginx                                     "/docker-entrypoint.…"   2 hours ago         Up 2 hours                     0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+09036399f9ff   nginx                                     "/docker-entrypoint.…"   2 hours ago         Exited (0) About an hour ago                                           nginx-container-1
+57c78a724337   nginx                                     "/docker-entrypoint.…"   2 hours ago         Exited (0) About an hour ago                                           nginx-container
+e57491f35154   automatics_analytics_dashboard_backend    "docker-entrypoint.s…"   20 months ago       Exited (0) 2 hours ago                                                 automaitcs-analytics-service
+9dd04b3ec476   mongo                                     "docker-entrypoint.s…"   20 months ago       Exited (0) 2 hours ago                                                 mongo
+2f921765c294   automatics_analytics_dashboard_frontend   "docker-entrypoint.s…"   20 months ago       Exited (0) 20 months ago                                               frontend
+9394e797bed8   hello-docker                              "docker-entrypoint.s…"   23 months ago       Exited (0) 23 months ago                                               practical_hawking
+PS C:\Users\lmanoh572\Documents\DockerSession>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+f492f6d47997   user-web-image:v1   "/bin/bash"              38 minutes ago      Up 38 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest       "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04        "/bin/bash"              About an hour ago   Up About an hour                                           ubuntu-container
+dcfbbd4f700f   nginx               "/docker-entrypoint.…"   2 hours ago         Up 2 hours         0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker run -itd --name ubuntu-dockerfile-container-3 -p 6068:80 ubuntu-dockerfile-image:v1
+878d7d8b2ee5ae4d54b9b28e89b75ba6d4bdfaa596dfe789d336de0cc725b1f4
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+f492f6d47997   user-web-image:v1   "/bin/bash"              44 minutes ago      Up 44 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest       "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04        "/bin/bash"              2 hours ago         Up 2 hours                                                 ubuntu-container
+dcfbbd4f700f   nginx               "/docker-entrypoint.…"   2 hours ago         Up 2 hours         0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+[+] Building 0.7s (11/11) FINISHED
+ => [internal] load build definition from Dockerfile                                                           0.0s
+ => => transferring dockerfile: 263B                                                                           0.0s
+ => [internal] load .dockerignore                                                                              0.0s
+ => => transferring context: 2B                                                                                0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                               0.0s
+ => [1/6] FROM docker.io/library/ubuntu                                                                        0.0s
+ => [internal] load build context                                                                              0.0s
+ => => transferring context: 92B                                                                               0.0s
+ => CACHED [2/6] RUN apt-get update -y                                                                         0.0s
+ => CACHED [3/6] RUN apt-get install apache2 -y                                                                0.0s
+ => CACHED [4/6] COPY index.html /var/www/html/index.html                                                      0.0s
+ => [5/6] COPY script.sh /root/script.sh                                                                       0.0s
+ => [6/6] RUN chmod 777 /root/script.sh                                                                        0.4s
+ => exporting to image                                                                                         0.1s
+ => => exporting layers                                                                                        0.0s
+ => => writing image sha256:b97e97ade8b8e3a9bb9362fe1602cf24a3f363b65ccd3bc3535db6a46fd73215                   0.0s
+ => => naming to docker.io/library/ubuntu-dockerfile-image:v2                                                  0.0s
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker run -itd --name ubuntu-dockerfile-container-4 -p 6068:80 ubuntu-dockerfile-image:v2
+c8caeec70c381d0387facc8d9fca52c2a4901a9e4f2b7b35b0f2ef61ab37aa67
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> docker ps
+CONTAINER ID   IMAGE                        COMMAND                   CREATED             STATUS             PORTS                                   NAMES
+c8caeec70c38   ubuntu-dockerfile-image:v2   "/bin/sh -c '\"/root/…"   5 seconds ago       Up 4 seconds       0.0.0.0:6068->80/tcp, :::6068->80/tcp   ubuntu-dockerfile-container-4
+f492f6d47997   user-web-image:v1            "/bin/bash"               45 minutes ago      Up 45 minutes      0.0.0.0:6061->80/tcp, :::6061->80/tcp   user-test-container
+1b2ae2ee5857   ubuntu:latest                "/bin/bash"               About an hour ago   Up About an hour   0.0.0.0:6060->80/tcp, :::6060->80/tcp   ubuntu-web
+6248489c6b19   ubuntu:23.04                 "/bin/bash"               2 hours ago         Up 2 hours                                                 ubuntu-container
+dcfbbd4f700f   nginx                        "/docker-entrypoint.…"    2 hours ago         Up 2 hours         0.0.0.0:5050->80/tcp, :::5050->80/tcp   nginx-container-2
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
