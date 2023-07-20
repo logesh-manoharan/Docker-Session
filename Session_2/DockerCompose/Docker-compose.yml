@@ -1,0 +1,14 @@
+services:
+ pythonapp:
+  build: ./python/
+  command: sh -c "sleep 10; python3 ./helloworld.py"
+  depends_on:
+  - mysql
+ mysql:
+  build: ./mysql/
+  restart: always
+  environment:
+   MYSQLDATABASE: 'db'
+   MYSQL_ROOT_PASSWORD: 'logesh'
+  ports:
+  - '3308:3306'

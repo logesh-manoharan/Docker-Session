@@ -1,0 +1,1496 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\lmanoh572>
+PS C:\Users\lmanoh572>
+PS C:\Users\lmanoh572> ls
+
+
+    Directory: C:\Users\lmanoh572
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     21-08-2022  06:58:00 PM                .android
+d-----     19-08-2022  09:44:39 PM                .appium
+d-----     21-10-2021  12:13:01 PM                .cache
+d-----     07-06-2021  02:45:44 PM                .cf
+d-----     21-10-2021  12:40:45 PM                .cloudflared
+d-----     10-06-2021  09:47:03 AM                .codemix
+d-----     09-06-2021  05:02:16 PM                .codemix-store
+d-----     22-10-2022  06:54:18 PM                .conda
+d-----     07-06-2021  03:42:25 PM                .config
+d-----     19-07-2023  02:57:31 PM                .docker
+d-----     10-06-2021  05:45:26 PM                .eclipse
+d-----     08-11-2022  07:59:51 PM                .gnupg
+d-----     15-08-2022  11:44:25 AM                .gradle
+d-----     17-10-2022  02:48:13 PM                .ipynb_checkpoints
+d-----     26-03-2021  03:29:45 PM                .ipython
+d-----     17-10-2022  03:25:51 PM                .jupyter
+d-----     27-04-2021  04:44:52 PM                .lemminx
+d-----     21-04-2023  06:24:03 PM                .m2
+d-----     25-11-2022  04:26:09 PM                .matplotlib
+d-----     15-06-2021  05:42:02 PM                .openjfx
+d-----     21-01-2022  07:43:31 PM                .p2
+d-----     23-12-2022  07:31:24 PM                .sonarlint
+d-----     26-07-2021  11:38:03 AM                .speedment
+d-----     09-11-2022  10:49:02 AM                .ssh
+d-----     29-04-2021  01:42:38 PM                .sts4
+d-----     15-02-2023  12:25:34 PM                .th-client
+d-----     09-12-2022  10:02:00 PM                .VirtualBox
+d-----     26-06-2023  10:47:58 AM                .vscode
+d-----     09-03-2021  02:45:33 PM                .vue-cli-ui
+d-----     13-07-2021  09:35:31 AM                .webclipse
+d-r---     13-11-2021  10:50:28 PM                3D Objects
+d-----     22-10-2022  07:00:14 PM                Anaconda3
+d-----     15-08-2022  11:40:15 AM                AndroidStudioProjects
+d-----     08-09-2021  11:56:22 AM                bin
+d-----     29-10-2021  03:31:25 PM                cats
+d-----     21-10-2021  12:38:10 PM                Cloudflared
+d-----     07-06-2021  05:08:44 PM                conf
+d-r---     13-11-2021  10:50:30 PM                Contacts
+d-r---     20-07-2023  10:56:55 AM                Desktop
+d-r---     19-07-2023  04:51:06 PM                Documents
+d-r---     20-07-2023  11:54:33 AM                Downloads
+d-----     21-01-2022  07:30:14 PM                eclipse
+d-----     28-04-2021  01:42:00 PM                eclipse-workspace
+d-r---     13-11-2021  10:50:30 PM                Favorites
+d-----     10-07-2023  01:10:42 PM                git
+d-----     29-04-2021  04:30:02 PM                IdeaProjects
+d-----     07-06-2021  05:08:45 PM                lib
+d-r---     13-11-2021  10:50:32 PM                Links
+d-----     07-06-2021  05:08:44 PM                logs
+d-r---     13-11-2021  10:50:31 PM                Music
+d-----     24-12-2021  11:17:31 AM                node_modules
+dar--l     19-07-2023  08:16:38 PM                OneDrive - Comcast
+d-r---     01-04-2023  12:08:29 AM                Pictures
+d-----     02-03-2021  01:50:50 PM                Postman
+d-----     10-10-2022  03:08:18 PM                PycharmProjects
+d-r---     13-11-2021  10:50:31 PM                Saved Games
+d-r---     13-11-2021  10:50:31 PM                Searches
+d-----     05-05-2023  08:54:22 PM                snowflake-ssh
+d-----     20-09-2021  02:05:05 PM                ssh_key2
+d-----     20-09-2021  01:57:50 PM                ssh_keys
+d-----     07-06-2021  05:08:45 PM                temp
+d-r---     13-11-2021  10:50:30 PM                Videos
+d-----     01-12-2022  03:26:34 PM                VirtualBox VMs
+d-----     07-06-2021  05:08:44 PM                webapps
+d-----     07-06-2021  05:08:44 PM                work
+-a----     31-12-2022  06:48:15 PM           5781 -1.14-windows.xml
+-a----     12-07-2023  06:51:41 PM          13204 .bash_history
+-a----     09-06-2021  05:01:53 PM            104 .codemix.properties
+-a----     22-10-2022  06:31:37 PM             43 .condarc
+-a----     12-03-2023  10:23:21 PM           4234 .dbshell
+-a----     15-08-2022  11:49:45 AM             16 .emulator_console_auth_token
+-a----     04-08-2021  04:39:39 PM             70 .gitconfig
+-a----     12-05-2021  10:10:43 AM           2099 .h2.server.properties
+-a----     02-07-2023  12:05:57 PM             14 .minttyrc
+-a----     20-03-2021  05:56:07 PM              0 .mongorc.js
+-a----     15-12-2022  02:47:07 PM              0 .node_repl_history
+-a----     26-03-2021  03:35:50 PM             35 .python_history
+-a----     26-11-2022  06:02:48 PM           9420 .viminfo
+-a----     12-12-2021  01:26:12 PM             92 .vuerc
+-a----     16-01-2023  04:24:04 PM       12754712 edb_pgjdbc.exe
+-a----     21-12-2021  01:24:36 PM           1891 FindOutList.js
+-a----     05-02-2021  06:30:33 PM        4388469 jump-win_64.zip
+-a----     07-06-2021  05:08:44 PM          57862 LICENSE
+-a----     22-12-2021  09:10:32 AM           7599 MoveStepToAnyPlace.js
+-a----     07-06-2021  05:08:44 PM           1228 NOTICE
+-a----     24-12-2021  11:17:44 AM         148202 package-lock.json
+-a----     24-12-2021  11:17:44 AM            137 package.json
+-a----     13-06-2022  07:35:17 PM            128 PUTTY.RND
+-a----     07-06-2021  05:08:44 PM           9054 RELEASE-NOTES
+-a----     07-06-2021  05:08:44 PM          16742 RUNNING.txt
+-a----     31-03-2023  12:53:34 AM           4172 sat_token_info.txt
+-a----     11-05-2023  05:36:33 PM              0 test_manager_1dot0_11MAY2023.sql
+-a----     17-10-2022  06:20:16 PM           5938 Untitled.ipynb
+-a----     17-10-2022  03:26:04 PM             78 untitled.txt
+-a----     20-12-2021  01:09:35 PM           2583 UpdateTheSteps.js
+
+
+PS C:\Users\lmanoh572>
+PS C:\Users\lmanoh572>
+PS C:\Users\lmanoh572>
+PS C:\Users\lmanoh572> cd .\Documents\
+PS C:\Users\lmanoh572\Documents>
+PS C:\Users\lmanoh572\Documents>
+PS C:\Users\lmanoh572\Documents> cd .\DockerSession\
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession>
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  05:21:30 PM            224 Dockerfile
+-a----     19-07-2023  07:39:51 PM         109295 DockerSession_1.txt
+-a----     19-07-2023  04:54:35 PM             47 index.html
+-a----     19-07-2023  05:19:55 PM             23 script.sh
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession> dir
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  05:21:30 PM            224 Dockerfile
+-a----     19-07-2023  07:39:51 PM         109295 DockerSession_1.txt
+-a----     19-07-2023  04:54:35 PM             47 index.html
+-a----     19-07-2023  05:19:55 PM             23 script.sh
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession> ls
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     19-07-2023  05:21:30 PM            224 Dockerfile
+-a----     19-07-2023  07:39:51 PM         109295 DockerSession_1.txt
+-a----     19-07-2023  04:54:35 PM             47 index.html
+-a----     19-07-2023  05:19:55 PM             23 script.sh
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession> mkdir Session_2
+
+
+    Directory: C:\Users\lmanoh572\Documents\DockerSession
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     20-07-2023  02:21:25 PM                Session_2
+
+
+PS C:\Users\lmanoh572\Documents\DockerSession> cd .\Session_2\
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> ls
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> vi -v
+vi : The term 'vi' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ vi -v
++ ~~
+    + CategoryInfo          : ObjectNotFound: (vi:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> vim
+vim : The term 'vim' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ vim
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (vim:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+[+] Building 156.2s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                     0.0s
+ => => transferring dockerfile: 108B                                                     0.0s
+ => [internal] load .dockerignore                                                        0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                         0.0s
+ => CACHED [1/3] FROM docker.io/library/ubuntu                                           0.0s
+ => [2/3] RUN apt -y update                                                            153.4s
+ => [3/3] RUN useradd -p pass logesh                                                     1.4s
+ => exporting to image                                                                   1.2s
+ => => exporting layers                                                                  1.1s
+ => => writing image sha256:1170a4761333a5d13b4e848ed6d9028e7a9cb61c8dd645470a2a5b2f329  0.0s
+ => => naming to docker.io/library/userimage:v1                                          0.0s
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED          SIZE
+userimage                                 v1            1170a4761333   34 seconds ago   120MB
+ubuntu-dockerfile-image                   v2            b97e97ade8b8   21 hours ago     227MB
+ubuntu-dockerfile-image                   v1            6cd8f2f98d90   22 hours ago     227MB
+user-web-image                            v1            2cb1f27b8507   22 hours ago     227MB
+nginx                                     latest        021283c8eb95   2 weeks ago      187MB
+ubuntu                                    latest        5a81c4b8502e   3 weeks ago      77.8MB
+ubuntu                                    23.04         1ed313b0551f   5 weeks ago      70.3MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago    1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago    1.55GB
+mongo                                     latest        4253856b2570   20 months ago    701MB
+hello-docker                              latest        59c52b193990   23 months ago    112MB
+logeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago    112MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run --rm userimage:v1 whoami
+logesh
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd --name user-container userimage:v1
+47a948c4e0ed26e6fe425ae0d3d54ded2b54553ad153f79273fcdefaa5c3198d
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ps
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED         STATUS          PORTS                                       NAMES
+47a948c4e0ed   userimage:v1                             "/bin/bash"              5 seconds ago   Up 4 seconds                                                user-container
+e57491f35154   automatics_analytics_dashboard_backend   "docker-entrypoint.s…"   20 months ago   Up 29 minutes   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   automaitcs-analytics-service
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it user-container /bin/bash
+logesh@47a948c4e0ed:/$
+logesh@47a948c4e0ed:/$
+logesh@47a948c4e0ed:/$
+logesh@47a948c4e0ed:/$
+logesh@47a948c4e0ed:/$ exit;
+exit
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          11        11        3.251GB   1.172GB (36%)
+Containers      16        2         151.4MB   151.4MB (99%)
+Local Volumes   6         2         945.2MB   629.8MB (66%)
+Build Cache     40        0         791.1MB   791.1MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker stats
+CONTAINER ID   NAME                           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
+47a948c4e0ed   user-container                 0.00%     1.742MiB / 12.17GiB   0.01%     1.02kB / 0B     0B / 0B     1
+e57491f35154   automaitcs-analytics-service   0.16%     64.45MiB / 12.17GiB   0.52%     1.88kB / 465B   0B / 0B     34
+CONTAINER ID   NAME                           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
+47a948c4e0ed   user-container                 0.00%     1.742MiB / 12.17GiB   0.01%     1.02kB / 0B     0B / 0B     1
+e57491f35154   automaitcs-analytics-service   0.00%     64.45MiB / 12.17GiB   0.52%     1.88kB / 465B   0B / 0B     34
+CONTAINER ID   NAME                           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
+47a948c4e0ed   user-container                 0.00%     1.742MiB / 12.17GiB   0.01%     1.02kB / 0B     0B / 0B     1
+e57491f35154   automaitcs-analytics-service   0.00%     64.45MiB / 12.17GiB   0.52%     1.88kB / 465B   0B / 0B     34
+CONTAINER ID   NAME                           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
+47a948c4e0ed   user-container                 0.00%     1.742MiB / 12.17GiB   0.01%     1.02kB / 0B     0B / 0B     1
+e57491f35154   automaitcs-analytics-service   0.00%     64.45MiB / 12.17GiB   0.52%     1.88kB / 465B   0B / 0B     34
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker stats --no-stream
+CONTAINER ID   NAME                           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
+47a948c4e0ed   user-container                 0.00%     1.742MiB / 12.17GiB   0.01%     1.02kB / 0B     0B / 0B     1
+e57491f35154   automaitcs-analytics-service   0.00%     64.45MiB / 12.17GiB   0.52%     1.88kB / 465B   0B / 0B     34
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED          SIZE
+userimage                                 v1            1170a4761333   10 minutes ago   120MB
+ubuntu-dockerfile-image                   v2            b97e97ade8b8   21 hours ago     227MB
+ubuntu-dockerfile-image                   v1            6cd8f2f98d90   22 hours ago     227MB
+user-web-image                            v1            2cb1f27b8507   22 hours ago     227MB
+nginx                                     latest        021283c8eb95   2 weeks ago      187MB
+ubuntu                                    latest        5a81c4b8502e   3 weeks ago      77.8MB
+ubuntu                                    23.04         1ed313b0551f   5 weeks ago      70.3MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago    1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago    1.55GB
+mongo                                     latest        4253856b2570   20 months ago    701MB
+hello-docker                              latest        59c52b193990   23 months ago    112MB
+logeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago    112MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker login                         Authenticating with existing credentials...
+Login Succeeded
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker tag userimage:v1 logeshmano/practice-public-repo:v1
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker push logeshmano/practice-public-repo:v1
+The push refers to repository [docker.io/logeshmano/practice-public-repo]
+4bbc5aabf980: Pushed
+4149ab60b144: Pushed
+59c56aee1fb4: Mounted from library/ubuntu
+v1: digest: sha256:7a01f4eefcf3d2586f710e7c74f52184476d9b01e1aa5602f33ce257efde962f size: 949
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED          SIZE
+userimage                                 v1            1170a4761333   35 minutes ago   120MB
+logeshmano/practice-public-repo           v1            1170a4761333   35 minutes ago   120MB
+ubuntu-dockerfile-image                   v2            b97e97ade8b8   22 hours ago     227MB
+ubuntu-dockerfile-image                   v1            6cd8f2f98d90   22 hours ago     227MB
+user-web-image                            v1            2cb1f27b8507   23 hours ago     227MB
+nginx                                     latest        021283c8eb95   2 weeks ago      187MB
+ubuntu                                    latest        5a81c4b8502e   3 weeks ago      77.8MB
+ubuntu                                    23.04         1ed313b0551f   5 weeks ago      70.3MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago    1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago    1.55GB
+mongo                                     latest        4253856b2570   20 months ago    701MB
+hello-docker                              latest        59c52b193990   23 months ago    112MB
+logeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago    112MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker tag nginx:latest logeshmano/logesh-private-repo:v1
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker push logeshmano/logesh-private-repo:v1
+The push refers to repository [docker.io/logeshmano/logesh-private-repo]
+3c9d04c9ebd5: Mounted from library/nginx
+434c6a715c30: Mounted from library/nginx
+9fdfd12bc85b: Mounted from library/nginx
+f36897eea34d: Mounted from library/nginx
+1998c5cd2230: Mounted from library/nginx
+b821d93f6666: Mounted from library/nginx
+24839d45ca45: Mounted from library/nginx
+v1: digest: sha256:1bb5c4b86cb7c1e9f0209611dc2135d8a2c1c3a6436163970c99193787d067ea size: 1778
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume ls
+DRIVER    VOLUME NAME
+local     2a7c18c8cf9de5295e42bcc8592d1fecde7cc38664b697fb8925a1573aabc8c4
+local     681835b7b91200ffeb1d658b80c5db32efdbfee88e4815bcd3b1b37e82338afc
+local     a8bedc2440644833364b9aa4e846d3adb831807b46f2286b6f98803933dff255
+local     ad35735a927506ab014406e7627d5c8e2384810a7da45601c0823933a429d660
+local     cb414b6049c31b52fe6a6b83873a5313e002d215fd89f0dc383b65a55f9fb8af
+local     f7b8622c62d64f1177d61ee9a3220faa0a481c2337e793c4a3775cf774d7f240
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Volumes:
+cb414b6049c31b52fe6a6b83873a5313e002d215fd89f0dc383b65a55f9fb8af
+f7b8622c62d64f1177d61ee9a3220faa0a481c2337e793c4a3775cf774d7f240
+681835b7b91200ffeb1d658b80c5db32efdbfee88e4815bcd3b1b37e82338afc
+ad35735a927506ab014406e7627d5c8e2384810a7da45601c0823933a429d660
+
+Total reclaimed space: 629.8MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume ls
+DRIVER    VOLUME NAME
+local     2a7c18c8cf9de5295e42bcc8592d1fecde7cc38664b697fb8925a1573aabc8c4
+local     a8bedc2440644833364b9aa4e846d3adb831807b46f2286b6f98803933dff255
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume create my-first-volume
+my-first-volume
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ls
+docker: 'ls' is not a docker command.
+See 'docker --help'
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume ls
+DRIVER    VOLUME NAME
+local     2a7c18c8cf9de5295e42bcc8592d1fecde7cc38664b697fb8925a1573aabc8c4
+local     a8bedc2440644833364b9aa4e846d3adb831807b46f2286b6f98803933dff255
+local     my-first-volume
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd -v my-first-volume:/storage --name alpine-test alpine
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+31e352740f53: Pull complete
+Digest: sha256:82d1e9d7ed48a7523bdebc18cf6290bdb97b82302a8a9c27d4fe885949ea94d1
+Status: Downloaded newer image for alpine:latest
+cf60ee12d4c92becf5ba57ed6585b7ce7e28e5d0ad4ba0a8c3e9179d5ad52e7a
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it alpine-test /bin/bash
+OCI runtime exec failed: exec failed: container_linux.go:380: starting container process caused: exec: "/bin/bash": stat /bin/bash: no such file or directory: unknown
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it --name alpine-test /bin/bash
+unknown flag: --name
+See 'docker exec --help'.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ps                            CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS             PORTS                                       NAMES
+cf60ee12d4c9   alpine                                   "/bin/sh"                2 minutes ago    Up 2 minutes                                                   alpine-test
+47a948c4e0ed   userimage:v1                             "/bin/bash"              47 minutes ago   Up 47 minutes                                                  user-container
+e57491f35154   automatics_analytics_dashboard_backend   "docker-entrypoint.s…"   20 months ago    Up About an hour   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   automaitcs-analytics-service
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it --name alpine-test /bin/sh
+unknown flag: --name
+See 'docker exec --help'.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it alpine-test /bin/sh  / #
+/ #
+/ #
+/ # exit;
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it alpine-test /bin/sh
+/ #
+/ #
+/ # ls
+bin      etc      lib      mnt      proc     run      srv      sys      usr
+dev      home     media    opt      root     sbin     storage  tmp      var
+/ #
+/ #
+/ # cd /var/lib/docker/volumes/my-first-volume
+/bin/sh: cd: can't cd to /var/lib/docker/volumes/my-first-volume: No such file or directory
+/ # cd var
+/var # cd lib/docker/volumes/my-first-volume
+/bin/sh: cd: can't cd to lib/docker/volumes/my-first-volume: No such file or directory
+/var #
+/var #
+/var # cd lib/
+/var/lib #
+/var/lib #
+/var/lib # exit;
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd -m 200m --name centos-container centos
+Unable to find image 'centos:latest' locally
+latest: Pulling from library/centos
+a1d0c7532777: Pull complete
+Digest: sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177
+Status: Downloaded newer image for centos:latest
+1e9af5f4eba3f521fb60277be61313b9009546801041e77a61cc0910105e7a92
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker volume
+
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ps
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED             STATUS             PORTS                                       NAMES
+1e9af5f4eba3   centos                                   "/bin/bash"              3 minutes ago       Up 3 minutes                                                   centos-container
+cf60ee12d4c9   alpine                                   "/bin/sh"                16 minutes ago      Up 16 minutes                                                  alpine-test
+47a948c4e0ed   userimage:v1                             "/bin/bash"              About an hour ago   Up About an hour                                               user-container
+e57491f35154   automatics_analytics_dashboard_backend   "docker-entrypoint.s…"   20 months ago       Up 2 hours         0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   automaitcs-analytics-service
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network
+
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network ls
+NETWORK ID     NAME                                     DRIVER    SCOPE
+a99fd9968040   automatics_analytics_dashboard_default   bridge    local
+2e28f9b55d4c   bridge                                   bridge    local
+19b302dac41b   host                                     host      local
+da250249aeab   none                                     null      local
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network create <NETWORK NAME> --driver bridge --subnet 192.168.50.0/24
+At line:1 char:23
++ docker network create <NETWORK NAME> --driver bridge --subnet 192.168 ...
++                       ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network create julynetwork --driver bridge --subnet 192.168.50.0/24
+508b2494b1d734cdf71c6a10133ef35cee7892124c1536b2c790b9a535e29331
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network ls
+NETWORK ID     NAME                                     DRIVER    SCOPE
+a99fd9968040   automatics_analytics_dashboard_default   bridge    local
+2e28f9b55d4c   bridge                                   bridge    local
+19b302dac41b   host                                     host      local
+508b2494b1d7   julynetwork                              bridge    local
+da250249aeab   none                                     null      local
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd --network julynetwork --name ubuntu-bridge-network ubuntu:latest
+09074ebe87f12e672892b0fddb9048d1394c87eb870b3b7a33322b44f1f35bce
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network inspect julynetwork
+[
+    {
+        "Name": "julynetwork",
+        "Id": "508b2494b1d734cdf71c6a10133ef35cee7892124c1536b2c790b9a535e29331",
+        "Created": "2023-07-20T11:00:27.3126599Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "192.168.50.0/24"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "09074ebe87f12e672892b0fddb9048d1394c87eb870b3b7a33322b44f1f35bce": {
+                "Name": "ubuntu-bridge-network",
+                "EndpointID": "26f2e0b05cc585d2b33a5227e02f2bec1cc494f7a09963d16bd6d27a44500225",
+                "MacAddress": "02:42:c0:a8:32:02",
+                "IPv4Address": "192.168.50.2/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it ubuntu-bridge-network /bin/bash
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# apt-get update -y
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [952 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.0 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [725 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [723 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1208 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1016 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [49.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [749 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [25.6 kB]
+Fetched 25.8 MB in 24s (1076 kB/s)
+Reading package lists... Done
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# apt-get install net-tools -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 204 kB of archives.
+After this operation, 819 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]
+Fetched 204 kB in 3s (75.2 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package net-tools.
+(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...
+Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# apt-get install iputils -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package iputils
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# exit;
+exit
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker exec -it ubuntu-bridge-network /bin/bash
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# ping 192.168.50.2
+bash: ping: command not found
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# ping
+bash: ping: command not found
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# apt-get install iputils-ping -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcap2-bin libpam-cap
+The following NEW packages will be installed:
+  iputils-ping libcap2-bin libpam-cap
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 76.8 kB of archives.
+After this operation, 280 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcap2-bin amd64 1:2.44-1ubuntu0.22.04.1 [26.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 iputils-ping amd64 3:20211215-1 [42.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpam-cap amd64 1:2.44-1ubuntu0.22.04.1 [7928 B]
+Fetched 76.8 kB in 2s (40.9 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcap2-bin.
+(Reading database ... 4444 files and directories currently installed.)
+Preparing to unpack .../libcap2-bin_1%3a2.44-1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libcap2-bin (1:2.44-1ubuntu0.22.04.1) ...
+Selecting previously unselected package iputils-ping.
+Preparing to unpack .../iputils-ping_3%3a20211215-1_amd64.deb ...
+Unpacking iputils-ping (3:20211215-1) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../libpam-cap_1%3a2.44-1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.44-1ubuntu0.22.04.1) ...
+Setting up libcap2-bin (1:2.44-1ubuntu0.22.04.1) ...
+Setting up libpam-cap:amd64 (1:2.44-1ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iputils-ping (3:20211215-1) ...
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# ping 192.168.50.2
+PING 192.168.50.2 (192.168.50.2) 56(84) bytes of data.
+64 bytes from 192.168.50.2: icmp_seq=1 ttl=64 time=0.575 ms
+64 bytes from 192.168.50.2: icmp_seq=2 ttl=64 time=0.033 ms
+64 bytes from 192.168.50.2: icmp_seq=3 ttl=64 time=0.039 ms
+64 bytes from 192.168.50.2: icmp_seq=4 ttl=64 time=0.037 ms
+^C
+--- 192.168.50.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3135ms
+rtt min/avg/max/mdev = 0.033/0.171/0.575/0.233 ms
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/#
+root@09074ebe87f1:/# exit;
+exit
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker images
+REPOSITORY                                TAG           IMAGE ID       CREATED         SIZE
+userimage                                 v1            1170a4761333   2 hours ago     120MB
+logeshmano/practice-public-repo           v1            1170a4761333   2 hours ago     120MB
+ubuntu-dockerfile-image                   v2            b97e97ade8b8   23 hours ago    227MB
+ubuntu-dockerfile-image                   v1            6cd8f2f98d90   24 hours ago    227MB
+user-web-image                            v1            2cb1f27b8507   24 hours ago    227MB
+nginx                                     latest        021283c8eb95   2 weeks ago     187MB
+logeshmano/logesh-private-repo            v1            021283c8eb95   2 weeks ago     187MB
+ubuntu                                    latest        5a81c4b8502e   3 weeks ago     77.8MB
+ubuntu                                    23.04         1ed313b0551f   5 weeks ago     70.3MB
+alpine                                    latest        c1aabb73d233   5 weeks ago     7.33MB
+automatics_analytics_dashboard_frontend   latest        be969fad25c0   20 months ago   1.15GB
+automatics_analytics_dashboard_backend    latest        21e6ca3abf80   20 months ago   1.55GB
+mongo                                     latest        4253856b2570   20 months ago   701MB
+centos                                    latest        5d0da3dc9764   22 months ago   231MB
+hello-docker                              latest        59c52b193990   23 months ago   112MB
+logeshmano/hello-docker                   version-0.1   59c52b193990   23 months ago   112MB
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd --network ubuntu-bridge-network --name centos-network-container centos:latest
+8049ed9feb9f55004f06a2d02c79dee796f208b53b9cc18c5489068e8f85e6b3
+docker: Error response from daemon: network ubuntu-bridge-network not found.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker network ls
+NETWORK ID     NAME                                     DRIVER    SCOPE
+a99fd9968040   automatics_analytics_dashboard_default   bridge    local
+2e28f9b55d4c   bridge                                   bridge    local
+19b302dac41b   host                                     host      local
+508b2494b1d7   julynetwork                              bridge    local
+da250249aeab   none                                     null      local
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd --network julynetwork --name centos-network-container centos:latest
+docker: Error response from daemon: Conflict. The container name "/centos-network-container" is already in use by container "8049ed9feb9f55004f06a2d02c79dee796f208b53b9cc18c5489068e8f85e6b3". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker stop centos-network-container
+centos-network-container
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker rm centos-network-container
+centos-network-container
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ps
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED             STATUS             PORTS                                       NAMES
+09074ebe87f1   ubuntu:latest                            "/bin/bash"              21 minutes ago      Up 21 minutes                                                  ubuntu-bridge-network
+1e9af5f4eba3   centos                                   "/bin/bash"              About an hour ago   Up About an hour                                               centos-container
+cf60ee12d4c9   alpine                                   "/bin/sh"                2 hours ago         Up 2 hours                                                     alpine-test
+47a948c4e0ed   userimage:v1                             "/bin/bash"              2 hours ago         Up 2 hours                                                     user-container
+e57491f35154   automatics_analytics_dashboard_backend   "docker-entrypoint.s…"   20 months ago       Up 3 hours         0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   automaitcs-analytics-service
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                   CREATED             STATUS                     PORTS                                       NAMES
+09074ebe87f1   ubuntu:latest                             "/bin/bash"               21 minutes ago      Up 21 minutes                                                          ubuntu-bridge-network
+1e9af5f4eba3   centos                                    "/bin/bash"               About an hour ago   Up About an hour                                                       centos-container
+cf60ee12d4c9   alpine                                    "/bin/sh"                 2 hours ago         Up 2 hours                                                             alpine-test
+47a948c4e0ed   userimage:v1                              "/bin/bash"               2 hours ago         Up 2 hours                                                             user-container
+c8caeec70c38   ubuntu-dockerfile-image:v2                "/bin/sh -c '\"/root/…"   24 hours ago        Exited (255) 3 hours ago   0.0.0.0:6068->80/tcp, :::6068->80/tcp       ubuntu-dockerfile-container-4
+878d7d8b2ee5   ubuntu-dockerfile-image:v1                "service apache2 sta…"    24 hours ago        Exited (0) 24 hours ago                                                ubuntu-dockerfile-container-3
+83870a2bc3fb   ubuntu-dockerfile-image:v1                "service apache2 sta…"    24 hours ago        Exited (0) 24 hours ago                                                ubuntu-dockerfile-container-2
+b43193e180ef   ubuntu-dockerfile-image:v1                "service apache2 sta…"    24 hours ago        Exited (0) 24 hours ago                                                ubuntu-dockerfile-container-1
+cce507d0a637   ubuntu-dockerfile-image:v1                "service apache2 sta…"    24 hours ago        Exited (0) 24 hours ago                                                ubuntu-dockerfile-container
+f492f6d47997   user-web-image:v1                         "/bin/bash"               24 hours ago        Exited (255) 3 hours ago   0.0.0.0:6061->80/tcp, :::6061->80/tcp       user-test-container
+1b2ae2ee5857   ubuntu:latest                             "/bin/bash"               25 hours ago        Exited (255) 3 hours ago   0.0.0.0:6060->80/tcp, :::6060->80/tcp       ubuntu-web
+6248489c6b19   ubuntu:23.04                              "/bin/bash"               25 hours ago        Exited (255) 3 hours ago                                               ubuntu-container
+dcfbbd4f700f   nginx                                     "/docker-entrypoint.…"    25 hours ago        Exited (255) 3 hours ago   0.0.0.0:5050->80/tcp, :::5050->80/tcp       nginx-container-2
+09036399f9ff   nginx                                     "/docker-entrypoint.…"    25 hours ago        Exited (0) 25 hours ago                                                nginx-container-1
+57c78a724337   nginx                                     "/docker-entrypoint.…"    25 hours ago        Exited (0) 25 hours ago                                                nginx-container
+e57491f35154   automatics_analytics_dashboard_backend    "docker-entrypoint.s…"    20 months ago       Up 3 hours                 0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   automaitcs-analytics-service
+9dd04b3ec476   mongo                                     "docker-entrypoint.s…"    20 months ago       Exited (0) 26 hours ago                                                mongo
+2f921765c294   automatics_analytics_dashboard_frontend   "docker-entrypoint.s…"    20 months ago       Exited (0) 20 months ago                                               frontend
+9394e797bed8   hello-docker                              "docker-entrypoint.s…"    23 months ago       Exited (0) 23 months ago                                               practical_hawking
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> docker run -itd --network julynetwork --name centos-network-container centos:latest
+ce976a0ab722a8ac220547d3598923fe2103c87f428f4a09057565e2d1622d59
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2> cd .\DockerCompose\
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker_compose up
+docker_compose : The term 'docker_compose' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:1
++ docker_compose up
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (docker_compose:String) [], CommandNotFoundExc
+   eption
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+yaml: line 6: did not find expected key
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+yaml: line 6: did not find expected key
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+yaml: line 4: mapping values are not allowed in this context
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+[+] Building 8.8s (15/16)
+ => [dockercompose_mysql internal] load build definition from Dockerfile                 0.1s
+ => => transferring dockerfile: 135B                                                     0.0s
+ => [dockercompose_pythonapp internal] load build definition from Dockerfile             0.1s
+ => => transferring dockerfile: 139B                                                     0.0s
+ => [dockercompose_mysql internal] load .dockerignore                                    0.1s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_pythonapp internal] load .dockerignore                                0.1s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_mysql internal] load metadata for docker.io/library/mysql:latest      7.9s
+ => [dockercompose_pythonapp internal] load metadata for docker.io/library/python:3.9    7.9s
+ => [auth] library/mysql:pull token for registry-1.docker.io                             0.0s
+ => [auth] library/python:pull token for registry-1.docker.io                            0.0s
+ => [dockercompose_mysql internal] load build context                                    0.2s
+ => => transferring context: 300B                                                        0.0s
+ => CANCELED [dockercompose_mysql 1/2] FROM docker.io/library/mysql:latest@sha256:23293  0.4s
+ => => resolve docker.io/library/mysql:latest@sha256:232936eb036d444045da2b87a90d48241c  0.1s
+ => => sha256:232936eb036d444045da2b87a90d48241c60b68b376caf509051cb6cffea6 549B / 549B  0.0s
+ => => sha256:47e045b6313ef483654ac47c31e6fdbfc6ecf6b399a65c03859bee2cf 2.62kB / 2.62kB  0.0s
+ => => sha256:041315a161837f8bb87361e13390abda7159b98aeedee5e6152a0bb7a 7.46kB / 7.46kB  0.0s
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01d 0B / 44.88MB  0.3s
+ => => sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ac 0B / 982.82kB  0.3s
+ => [dockercompose_pythonapp internal] load build context                                0.4s
+ => => transferring context: 2B                                                          0.1s
+ => CANCELED [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:ba1  0.4s
+ => => resolve docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad  0.1s
+ => => sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad4e6a3dd7b82e2dfb1a9b6 1.86kB / 1.86kB  0.0s
+ => => sha256:46d99870b9c25e64c5583a59fec411df04191ab6b14cf81a72b9e4a20 2.01kB / 2.01kB  0.0s
+ => => sha256:1d7821476b679b633b88afbb713dc4ac6b0857d1b4195fca1bc49d440 7.51kB / 7.51kB  0.0s
+ => CACHED [dockercompose_pythonapp 2/4] RUN pip install mysql-connector-python          0.0s
+ => CACHED [dockercompose_pythonapp 3/4] WORKDIR /usr/apps/src                           0.0s
+ => ERROR [dockercompose_pythonapp 4/4] COPY hello_world.py ./                           0.0s
+------
+ > [dockercompose_pythonapp 4/4] COPY hello_world.py ./:
+------
+failed to solve: rpc error: code = Unknown desc = failed to compute cache key: "/hello_world.py" not found: not found
+[+] Building 243.3s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 249.8s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 379.6s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 380.5s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 449.5s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 449.7s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 449.8s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 449.9s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+[+] Building 598.6s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 598.8s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+[+] Building 600.6s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 603.8s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 604.2s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 605.5s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+ => => sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169 5.39kB / 5.39kB  70.6s
+ => => extracting sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01db2  3.7s
+ => => extracting sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a6  0.0s
+ => => extracting sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ace65  0.1s
+ => => sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65 121B / 121B  72.4s
+ => => extracting sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a56b9c95  0.4s
+ => => extracting sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf36198f  0.0s
+ => => extracting sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273b  0.0s
+ => => extracting sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7dedd5342f02  4.3s
+ => => extracting sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13c7  0.0s
+ => => extracting sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2dc429d07  10.5s
+ => => extracting sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169de3987  0.0s
+ => => extracting sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65d1  0.0s
+ => [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:ba10a2af9d  602.6s
+ => => resolve docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad  0.0s
+ => => sha256:46d99870b9c25e64c5583a59fec411df04191ab6b14cf81a72b9e4a20 2.01kB / 2.01kB  0.0s
+ => => sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad4e6a3dd7b82e2dfb1a9b6 1.86kB / 1.86kB  0.0s
+ => => sha256:1d7821476b679b633b88afbb713dc4ac6b0857d1b4195fca1bc49d440 7.51kB / 7.51kB  0.0s
+ => => sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1ba 49.55MB / 49.55MB  135.0s
+ => => sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a 24.03MB / 24.03MB  220.7s
+ => => sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0 64.11MB / 64.11MB  211.3s
+ => => sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db9 51.38MB / 211.00MB  602.6s
+ => => extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b7  5.9s
+ => => sha256:d3797e13cc41e1387a937908677cc66838a672cdc8ba8de9b966f18 6.39MB / 6.39MB  221.5s
+ => => sha256:9421d62bef941e63ffebd2e6843ba2a8b8b91f5faf640d21f7245 15.82MB / 15.82MB  486.0s
+ => => extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747e  2.1s
+ => => sha256:19d7d75bfdca3514a5f4aeb3bc75fb533830fb68086bad3260e60f40178 243B / 243B  223.2s
+ => => sha256:67f28346abde952b467c778c7138e4883c52e680b599efea6e44575 2.85MB / 2.85MB  244.5s
+ => => extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316dea  6.6s
+ => [dockercompose_pythonapp internal] load build context                                0.0s
+ => => transferring context: 328B                                                        0.0s
+ => [dockercompose_mysql 2/2] COPY ./database_students.sql /docker-entrypoint-initdb.d/  2.2s
+ => [dockercompose_mysql] exporting to image                                             0.1s
+ => => exporting layers                                                                  0.0s
+ => => writing image sha256:38e04a91cd78ede871097a00e0100c61b2dc6733023f2c030fe0a9798b3  0.0s
+ => => naming to docker.io/library/dockercompose_mysql                                   0.0s
+[+] Building 606.0s (11/15)
+[+] Building 620.5s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+ => => sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169 5.39kB / 5.39kB  70.6s
+ => => extracting sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01db2  3.7s
+ => => extracting sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a6  0.0s
+ => => extracting sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ace65  0.1s
+ => => sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65 121B / 121B  72.4s
+ => => extracting sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a56b9c95  0.4s
+ => => extracting sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf36198f  0.0s
+ => => extracting sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273b  0.0s
+ => => extracting sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7dedd5342f02  4.3s
+ => => extracting sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13c7  0.0s
+ => => extracting sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2dc429d07  10.5s
+ => => extracting sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169de3987  0.0s
+ => => extracting sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65d1  0.0s
+ => [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:ba10a2af9d  617.6s
+ => => resolve docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad  0.0s
+ => => sha256:46d99870b9c25e64c5583a59fec411df04191ab6b14cf81a72b9e4a20 2.01kB / 2.01kB  0.0s
+[+] Building 669.1s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+ => => sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169 5.39kB / 5.39kB  70.6s
+ => => extracting sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01db2  3.7s
+ => => extracting sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a6  0.0s
+ => => extracting sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ace65  0.1s
+ => => sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65 121B / 121B  72.4s
+ => => extracting sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a56b9c95  0.4s
+ => => extracting sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf36198f  0.0s
+[+] Building 669.9s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+ => => sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169 5.39kB / 5.39kB  70.6s
+ => => extracting sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01db2  3.7s
+ => => extracting sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a6  0.0s
+ => => extracting sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ace65  0.1s
+[+] Building 722.6s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 793.7s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+[+] Building 793.9s (11/15)
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+[+] Building 821.5s (12/15)
+ => [dockercompose_pythonapp internal] load build definition from Dockerfile             0.0s
+ => => transferring dockerfile: 138B                                                     0.0s
+ => [dockercompose_mysql internal] load build definition from Dockerfile                 0.0s
+ => => transferring dockerfile: 31B                                                      0.0s
+ => [dockercompose_pythonapp internal] load .dockerignore                                0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_mysql internal] load .dockerignore                                    0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_pythonapp internal] load metadata for docker.io/library/python:3.9    2.4s
+ => [dockercompose_mysql internal] load metadata for docker.io/library/mysql:latest      2.3s
+ => [dockercompose_mysql internal] load build context                                    0.0s
+ => => transferring context: 43B                                                         0.0s
+ => [dockercompose_mysql 1/2] FROM docker.io/library/mysql:latest@sha256:232936eb036d  141.4s
+ => => resolve docker.io/library/mysql:latest@sha256:232936eb036d444045da2b87a90d48241c  0.0s
+ => => sha256:47e045b6313ef483654ac47c31e6fdbfc6ecf6b399a65c03859bee2cf 2.62kB / 2.62kB  0.0s
+ => => sha256:041315a161837f8bb87361e13390abda7159b98aeedee5e6152a0bb7a 7.46kB / 7.46kB  0.0s
+ => => sha256:232936eb036d444045da2b87a90d48241c60b68b376caf509051cb6cffea6 549B / 549B  0.0s
+ => => sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a 884B / 884B  1.4s
+ => => sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a01 982.82kB / 982.82kB  4.2s
+ => => sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d 44.88MB / 44.88MB  66.4s
+ => => sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a5 4.60MB / 4.60MB  13.0s
+ => => sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf3 2.63kB / 2.63kB  5.4s
+ => => sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273 332B / 332B  6.2s
+ => => sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7de 58.60MB / 58.60MB  125.2s
+ => => sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13 316B / 316B  14.0s
+ => => sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2 56.56MB / 56.56MB  101.2s
+ => => sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169 5.39kB / 5.39kB  70.6s
+ => => extracting sha256:e2c03c89dcad02e83fe01768b82c438fcf60b831104614ca96ed5d8df01db2  3.7s
+ => => extracting sha256:68eb43837bf88f9e06c8bd54cca2548b7cf92495536d40998a334e0ac299a6  0.0s
+ => => extracting sha256:796892ddf5acde022b0881d1683b58c8ea2eca8046b7c63f79a011100ace65  0.1s
+ => => sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65 121B / 121B  72.4s
+ => => extracting sha256:6bca45eb31e17400b610ab11f38d7fda3319f149326b2c5f712c33a56b9c95  0.4s
+ => => extracting sha256:ebb53bc0dcca4d129ba3e1a91a856537be70a9c5c6032aa5cf9763bf36198f  0.0s
+ => => extracting sha256:2e2c6bdc7a40aed4ca602a4bb4ce9781007d5cdb32d661c760d37aeb77273b  0.0s
+ => => extracting sha256:6f27b5c7697033c604eed80da6ab110d7e81ea4e73717c148d7dedd5342f02  4.3s
+ => => extracting sha256:438533a248105048d7f275a49f6885462110fd9a37bbe411d12e07a1bf13c7  0.0s
+ => => extracting sha256:e5bdf19985e0de68dd9f165eaea8ff61c961cbee89ebf349fbdc2dc429d07  10.5s
+ => => extracting sha256:667fa148337b6da471bc16887a43ab664e64472abe6f890c50209169de3987  0.0s
+ => => extracting sha256:5baa702110e47beeb15b1dc74593040b23f270479dd8361f0491223c2b65d1  0.0s
+ => CANCELED [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:b  818.7s
+ => => resolve docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad  0.0s
+ => => sha256:46d99870b9c25e64c5583a59fec411df04191ab6b14cf81a72b9e4a20 2.01kB / 2.01kB  0.0s
+ => => sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad4e6a3dd7b82e2dfb1a9b6 1.86kB / 1.86kB  0.0s
+ => => sha256:1d7821476b679b633b88afbb713dc4ac6b0857d1b4195fca1bc49d440 7.51kB / 7.51kB  0.0s
+ => => sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1ba 49.55MB / 49.55MB  135.0s
+ => => sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a 24.03MB / 24.03MB  220.7s
+ => => sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0 64.11MB / 64.11MB  211.3s
+ => => sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db9 68.16MB / 211.00MB  818.7s
+ => => extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b7  5.9s
+ => => sha256:d3797e13cc41e1387a937908677cc66838a672cdc8ba8de9b966f18 6.39MB / 6.39MB  221.5s
+ => => sha256:9421d62bef941e63ffebd2e6843ba2a8b8b91f5faf640d21f7245 15.82MB / 15.82MB  486.0s
+ => => extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747e  2.1s
+ => => sha256:19d7d75bfdca3514a5f4aeb3bc75fb533830fb68086bad3260e60f40178 243B / 243B  223.2s
+ => => sha256:67f28346abde952b467c778c7138e4883c52e680b599efea6e44575 2.85MB / 2.85MB  244.5s
+ => => extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316dea  6.6s
+ => [dockercompose_pythonapp internal] load build context                                0.0s
+ => => transferring context: 328B                                                        0.0s
+ => [dockercompose_mysql 2/2] COPY ./database_students.sql /docker-entrypoint-initdb.d/  2.2s
+ => [dockercompose_mysql] exporting to image                                             0.1s
+ => => exporting layers                                                                  0.0s
+ => => writing image sha256:38e04a91cd78ede871097a00e0100c61b2dc6733023f2c030fe0a9798b3  0.0s
+ => => naming to docker.io/library/dockercompose_mysql                                   0.0s
+canceled
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Building 2.2s (4/4) FINISHED
+ => [internal] load build definition from Dockerfile                                     0.0s
+ => => transferring dockerfile: 31B                                                      0.0s
+ => [internal] load .dockerignore                                                        0.0s
+ => => transferring context: 2B                                                          0.0s
+ => CANCELED [internal] load metadata for docker.io/library/python:3.9                   2.1s
+ => [auth] library/python:pull token for registry-1.docker.io                            0.0s
+canceled
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Building 227.5s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                     0.0s
+ => => transferring dockerfile: 31B                                                      0.0s
+ => [internal] load .dockerignore                                                        0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [internal] load metadata for docker.io/library/python:3.9                            4.5s
+ => [internal] load build context                                                        0.0s
+ => => transferring context: 328B                                                        0.0s
+ => [1/4] FROM docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcb  193.7s
+ => => resolve docker.io/library/python:3.9@sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad  0.0s
+ => => sha256:ba10a2af9d6c3bd0d20c46ecbf866dabcbad4e6a3dd7b82e2dfb1a9b6 1.86kB / 1.86kB  0.0s
+ => => sha256:46d99870b9c25e64c5583a59fec411df04191ab6b14cf81a72b9e4a20 2.01kB / 2.01kB  0.0s
+ => => sha256:1d7821476b679b633b88afbb713dc4ac6b0857d1b4195fca1bc49d440 7.51kB / 7.51kB  0.0s
+ => => sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2 24.03MB / 24.03MB  66.0s
+ => => sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae 49.55MB / 49.55MB  43.2s
+ => => sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0 64.11MB / 64.11MB  128.0s
+ => => sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db 211.00MB / 211.00MB  164.3s
+ => => extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b  10.4s
+ => => sha256:d3797e13cc41e1387a937908677cc66838a672cdc8ba8de9b966f18 6.39MB / 6.39MB  155.0s
+ => => extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747e  1.4s
+ => => sha256:9421d62bef941e63ffebd2e6843ba2a8b8b91f5faf640d21f7245 15.82MB / 15.82MB  182.0s
+ => => extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316dea  9.9s
+ => => sha256:19d7d75bfdca3514a5f4aeb3bc75fb533830fb68086bad3260e60f40178 243B / 243B  160.5s
+ => => sha256:67f28346abde952b467c778c7138e4883c52e680b599efea6e44575 2.85MB / 2.85MB  188.3s
+ => => extracting sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db94ca61082f  23.0s
+ => => extracting sha256:d3797e13cc41e1387a937908677cc66838a672cdc8ba8de9b966f1801723d0  1.4s
+ => => extracting sha256:9421d62bef941e63ffebd2e6843ba2a8b8b91f5faf640d21f72450177f1ee8  1.9s
+ => => extracting sha256:19d7d75bfdca3514a5f4aeb3bc75fb533830fb68086bad3260e60f4017805d  0.0s
+ => => extracting sha256:67f28346abde952b467c778c7138e4883c52e680b599efea6e44575adb332f  0.8s
+ => [2/4] RUN pip install mysql-connector-python                                        27.6s
+ => [3/4] WORKDIR /usr/apps/src                                                          0.0s
+ => [4/4] COPY helloworld.py ./                                                          0.0s
+ => exporting to image                                                                   1.4s
+ => => exporting layers                                                                  1.4s
+ => => writing image sha256:bb8e91aa375b00dfddba5a233bdccc854ec4f0ed6ef6ac80bc314d3f8ee  0.0s
+ => => naming to docker.io/library/dockercompose_pythonapp                               0.0s
+[+] Running 3/3
+ - Network dockercompose_default        Created                                          0.1s
+ - Container dockercompose_mysql_1      Created                                          0.2s
+ - Container dockercompose_pythonapp_1  Created                                          1.8s
+Attaching to mysql_1, pythonapp_1
+Error response from daemon: Ports are not available: listen tcp 0.0.0.0:3307: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Running 2/2
+ - Container dockercompose_mysql_1      Recreated                                        0.4s
+ - Container dockercompose_pythonapp_1  Recreat...                                       0.6s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:16:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:16:35+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:16:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:16:35+00:00 [Note] [Entrypoint]: Initializing database files
+mysql_1      | 2023-07-20T12:16:35.776512Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:16:35.776690Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.33) initializing of server in progress as process 80
+mysql_1      | 2023-07-20T12:16:35.794209Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:16:36.676588Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:16:39.182763Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+mysql_1      | 2023-07-20 12:16:44+00:00 [Note] [Entrypoint]: Database files initialized
+mysql_1      | 2023-07-20 12:16:44+00:00 [Note] [Entrypoint]: Starting temporary server
+mysql_1      | 2023-07-20T12:16:44.915950Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:16:44.918474Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 124
+mysql_1      | 2023-07-20T12:16:44.941886Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:16:45.147895Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:16:45.644071Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:16:45.644161Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:16:45.648591Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:16:45.685834Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:16:45.686181Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+mysql_1      | 2023-07-20 12:16:45+00:00 [Note] [Entrypoint]: Temporary server started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 1
+pythonapp_1  |     impoty mysql.connector
+pythonapp_1  |            ^
+pythonapp_1  | SyntaxError: invalid syntax
+pythonapp_1 exited with code 1
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+mysql_1      |
+mysql_1      | 2023-07-20 12:16:52+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/Database_students.sql
+mysql_1      | ERROR 1054 (42S22) at line 7: Unknown column 'name.email' in 'field list'
+mysql_1 exited with code 1
+[+] Running 2/0noh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+ - Container dockercompose_mysql_1      Running                                          0.0s
+ - Container dockercompose_pythonapp_1  Created                                          0.0s
+Attaching to mysql_1, pythonapp_1
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 1
+pythonapp_1  |     impoty mysql.connector
+pythonapp_1  |            ^
+pythonapp_1  | SyntaxError: invalid syntax
+pythonapp_1 exited with code 1
+Gracefully stopping... (press Ctrl+C again to force)
+[+] Running 2/2
+ - Container dockercompose_pythonapp_1  Stopped                                          0.1s
+ - Container dockercompose_mysql_1      Stopped                                          1.9s
+canceled
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Running 2/0
+ - Container dockercompose_mysql_1      Created                                          0.0s
+ - Container dockercompose_pythonapp_1  Created                                          0.0s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:17:40+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:17:41+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:17:41+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql_1      | 2023-07-20T12:17:41.652148Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:17:41.654365Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+mysql_1      | 2023-07-20T12:17:41.668484Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:17:41.897401Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:17:42.300493Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:17:42.300571Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:17:42.305000Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:17:42.340799Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:17:42.341206Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 1
+pythonapp_1  |     impoty mysql.connector
+pythonapp_1  |            ^
+pythonapp_1  | SyntaxError: invalid syntax
+pythonapp_1 exited with code 1
+Gracefully stopping... (press Ctrl+C again to force)
+[+] Running 2/2
+ - Container dockercompose_pythonapp_1  Stopped                                          0.1s
+ - Container dockercompose_mysql_1      Stopped                                          1.8s
+canceled
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> ^C
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker exec -it dockercompose_pythonapp_1
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker exec -it dockercompose_pythonapp_1 /bin/bash
+Error response from daemon: Container 1869dbd9b784aea3dd1560f6fbccc16f68dbe7791daa5f339f36e11a8cb6241b is not running
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Running 2/2
+ - Container dockercompose_mysql_1      Created                                          0.1s
+ - Container dockercompose_pythonapp_1  Created                                          1.9s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:20:18+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:20:18+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:20:18+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:20:18+00:00 [Note] [Entrypoint]: Initializing database files
+mysql_1      | 2023-07-20T12:20:18.641591Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:20:18.641722Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.33) initializing of server in progress as process 80
+mysql_1      | 2023-07-20T12:20:18.653473Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:20:19.219644Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:20:21.456771Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+mysql_1      | 2023-07-20 12:20:25+00:00 [Note] [Entrypoint]: Database files initialized
+mysql_1      | 2023-07-20 12:20:25+00:00 [Note] [Entrypoint]: Starting temporary server
+mysql_1      | 2023-07-20T12:20:26.240466Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:20:26.243034Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 124
+mysql_1      | 2023-07-20T12:20:26.261150Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:20:26.454992Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:20:26.832934Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:20:26.833014Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:20:26.836795Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:20:26.875025Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:20:26.877228Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+mysql_1      | 2023-07-20 12:20:26+00:00 [Note] [Entrypoint]: Temporary server started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 1
+pythonapp_1  |     impoty mysql.connector
+pythonapp_1  |            ^
+pythonapp_1  | SyntaxError: invalid syntax
+pythonapp_1 exited with code 1
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+mysql_1      |
+mysql_1      | 2023-07-20 12:20:31+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/Database_students.sql
+mysql_1      | ERROR 1054 (42S22) at line 7: Unknown column 'name.email' in 'field list'
+mysql_1 exited with code 1
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Building 4.0s (17/17) FINISHED
+ => [dockercompose_mysql internal] load build definition from Dockerfile                 0.0s
+ => => transferring dockerfile: 135B                                                     0.0s
+ => [dockercompose_pythonapp internal] load build definition from Dockerfile             0.0s
+ => => transferring dockerfile: 138B                                                     0.0s
+ => [dockercompose_mysql internal] load .dockerignore                                    0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_mysql internal] load metadata for docker.io/library/mysql:latest      3.6s
+ => [dockercompose_pythonapp internal] load .dockerignore                                0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_pythonapp internal] load metadata for docker.io/library/python:3.9    3.5s
+ => [auth] library/python:pull token for registry-1.docker.io                            0.0s
+ => [auth] library/mysql:pull token for registry-1.docker.io                             0.0s
+ => [dockercompose_mysql internal] load build context                                    0.0s
+ => => transferring context: 300B                                                        0.0s
+ => [dockercompose_mysql 1/2] FROM docker.io/library/mysql:latest@sha256:232936eb036d44  0.0s
+ => [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:ba10a2af9d6c  0.0s
+ => [dockercompose_pythonapp internal] load build context                                0.0s
+ => => transferring context: 328B                                                        0.0s
+ => CACHED [dockercompose_mysql 2/2] COPY ./database_students.sql /docker-entrypoint-in  0.0s
+ => [dockercompose_pythonapp] exporting to image                                         0.1s
+ => => exporting layers                                                                  0.0s
+ => => writing image sha256:38e04a91cd78ede871097a00e0100c61b2dc6733023f2c030fe0a9798b3  0.0s
+ => => naming to docker.io/library/dockercompose_mysql                                   0.0s
+ => => writing image sha256:e1862d5396eb47275e1b2e22d8d136c625d7a3a7452cefc14b54279722f  0.0s
+ => => naming to docker.io/library/dockercompose_pythonapp                               0.0s
+ => CACHED [dockercompose_pythonapp 2/4] RUN pip install mysql-connector-python          0.0s
+ => CACHED [dockercompose_pythonapp 3/4] WORKDIR /usr/apps/src                           0.0s
+ => [dockercompose_pythonapp 4/4] COPY helloworld.py ./                                  0.1s
+[+] Running 2/2
+ - Container dockercompose_mysql_1      Created                                          0.2s
+ - Container dockercompose_pythonapp_1  Created                                          0.2s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:21:25+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:21:25+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:21:25+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:21:25+00:00 [Note] [Entrypoint]: Initializing database files
+mysql_1      | 2023-07-20T12:21:25.986645Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:21:25.986766Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.33) initializing of server in progress as process 80
+mysql_1      | 2023-07-20T12:21:25.997291Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:21:26.575946Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:21:28.684974Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+mysql_1      | 2023-07-20 12:21:32+00:00 [Note] [Entrypoint]: Database files initialized
+mysql_1      | 2023-07-20 12:21:32+00:00 [Note] [Entrypoint]: Starting temporary server
+mysql_1      | 2023-07-20T12:21:32.681348Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:21:32.684474Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 124
+mysql_1      | 2023-07-20T12:21:32.702218Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:21:32.905067Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:21:33.430970Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:21:33.431104Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:21:33.436565Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:21:33.483383Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:21:33.483627Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+mysql_1      | 2023-07-20 12:21:33+00:00 [Note] [Entrypoint]: Temporary server started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+pythonapp_1  | Traceback (most recent call last):
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 302, in _open_connection
+pythonapp_1  |     self._cmysql.connect(**cnx_kwargs)
+pythonapp_1  | _mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'mysql:3306' (111)
+pythonapp_1  |
+pythonapp_1  | The above exception was the direct cause of the following exception:
+pythonapp_1  |
+pythonapp_1  | Traceback (most recent call last):
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 3, in <module>
+pythonapp_1  |     connection = mysql.connector.connect(user="root",password="logesh",host="mysql", port="3306",database="db")
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/pooling.py", line 293, in connect
+pythonapp_1  |     return CMySQLConnection(*args, **kwargs)
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 128, in __init__
+pythonapp_1  |     self.connect(**kwargs)
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/abstracts.py", line 1217, in connect
+pythonapp_1  |     self._open_connection()
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 307, in _open_connection
+pythonapp_1  |     raise get_mysql_exception(
+pythonapp_1  | mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'mysql:3306' (111)
+pythonapp_1 exited with code 1
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+mysql_1      |
+mysql_1      | 2023-07-20 12:21:38+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/Database_students.sql
+mysql_1      | ERROR 1054 (42S22) at line 7: Unknown column 'name.email' in 'field list'
+mysql_1 exited with code 1
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose>
+PS C:\Users\lmanoh572\Documents\DockerSession\Session_2\DockerCompose> docker compose up
+[+] Building 2.9s (15/15) FINISHED
+ => [dockercompose_pythonapp internal] load build definition from Dockerfile             0.0s
+ => => transferring dockerfile: 138B                                                     0.0s
+ => [dockercompose_mysql internal] load build definition from Dockerfile                 0.0s
+ => => transferring dockerfile: 135B                                                     0.0s
+ => [dockercompose_pythonapp internal] load .dockerignore                                0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_mysql internal] load .dockerignore                                    0.0s
+ => => transferring context: 2B                                                          0.0s
+ => [dockercompose_pythonapp internal] load metadata for docker.io/library/python:3.9    2.4s
+ => [dockercompose_mysql internal] load metadata for docker.io/library/mysql:latest      2.4s
+ => [dockercompose_mysql internal] load build context                                    0.0s
+ => => transferring context: 300B                                                        0.0s
+ => CACHED [dockercompose_mysql 1/2] FROM docker.io/library/mysql:latest@sha256:232936e  0.0s
+ => [dockercompose_pythonapp 1/4] FROM docker.io/library/python:3.9@sha256:ba10a2af9d6c  0.0s
+ => [dockercompose_pythonapp internal] load build context                                0.0s
+ => => transferring context: 35B                                                         0.0s
+ => CACHED [dockercompose_pythonapp 2/4] RUN pip install mysql-connector-python          0.0s
+ => CACHED [dockercompose_pythonapp 3/4] WORKDIR /usr/apps/src                           0.0s
+ => CACHED [dockercompose_pythonapp 4/4] COPY helloworld.py ./                           0.0s
+ => [dockercompose_mysql] exporting to image                                             0.1s
+ => => exporting layers                                                                  0.0s
+ => => writing image sha256:e1862d5396eb47275e1b2e22d8d136c625d7a3a7452cefc14b54279722f  0.0s
+ => => naming to docker.io/library/dockercompose_pythonapp                               0.0s
+ => => writing image sha256:588cd3ab3d7e72c8dada63635359f0e58535155b7376c5bf724782ee213  0.0s
+ => => naming to docker.io/library/dockercompose_mysql                                   0.0s
+ => [dockercompose_mysql 2/2] COPY ./database_students.sql /docker-entrypoint-initdb.d/  0.1s
+[+] Running 2/2
+ - Container dockercompose_mysql_1      Created                                          0.2s
+ - Container dockercompose_pythonapp_1  Created                                          0.2s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:22:48+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:22:48+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:22:48+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:22:49+00:00 [Note] [Entrypoint]: Initializing database files
+mysql_1      | 2023-07-20T12:22:49.113021Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:22:49.113128Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.33) initializing of server in progress as process 81
+mysql_1      | 2023-07-20T12:22:49.124419Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:22:49.735703Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:22:51.908275Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+mysql_1      | 2023-07-20 12:22:56+00:00 [Note] [Entrypoint]: Database files initialized
+mysql_1      | 2023-07-20 12:22:56+00:00 [Note] [Entrypoint]: Starting temporary server
+mysql_1      | 2023-07-20T12:22:56.707313Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:22:56.708798Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 125
+mysql_1      | 2023-07-20T12:22:56.725645Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:22:56.886452Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:22:57.336233Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:22:57.336340Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:22:57.342630Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:22:57.374116Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:22:57.374367Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+mysql_1      | 2023-07-20 12:22:57+00:00 [Note] [Entrypoint]: Temporary server started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+pythonapp_1  | Traceback (most recent call last):
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 302, in _open_connection
+pythonapp_1  |     self._cmysql.connect(**cnx_kwargs)
+pythonapp_1  | _mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'mysql:3306' (111)
+pythonapp_1  |
+pythonapp_1  | The above exception was the direct cause of the following exception:
+pythonapp_1  |
+pythonapp_1  | Traceback (most recent call last):
+pythonapp_1  |   File "/usr/apps/src/./helloworld.py", line 3, in <module>
+pythonapp_1  |     connection = mysql.connector.connect(user="root",password="logesh",host="mysql", port="3306",database="db")
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/pooling.py", line 293, in connect
+pythonapp_1  |     return CMySQLConnection(*args, **kwargs)
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 128, in __init__
+pythonapp_1  |     self.connect(**kwargs)
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/abstracts.py", line 1217, in connect
+pythonapp_1  |     self._open_connection()
+pythonapp_1  |   File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 307, in _open_connection
+pythonapp_1  |     raise get_mysql_exception(
+pythonapp_1  | mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'mysql:3306' (111)
+pythonapp_1 exited with code 1
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+mysql_1      | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+mysql_1      |
+mysql_1      | 2023-07-20 12:23:02+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/Database_students.sql
+mysql_1      |
+mysql_1      |
+mysql_1      | 2023-07-20 12:23:02+00:00 [Note] [Entrypoint]: Stopping temporary server
+mysql_1      | 2023-07-20T12:23:02.190650Z 11 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.33).
+mysql_1      | 2023-07-20T12:23:03.924289Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+mysql_1      | 2023-07-20 12:23:04+00:00 [Note] [Entrypoint]: Temporary server stopped
+mysql_1      |
+mysql_1      | 2023-07-20 12:23:04+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+mysql_1      |
+mysql_1      | 2023-07-20T12:23:04.405622Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:23:04.406969Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+mysql_1      | 2023-07-20T12:23:04.415952Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:23:04.538033Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:23:04.834963Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:23:04.835036Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:23:04.842193Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:23:04.881055Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:23:04.881214Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[+] Running 2/2ping... (press Ctrl+C again to force)
+ - Container dockercompose_pythonapp_1  Stopped                                          1.1s
+ - Container dockercompose_mysql_1      Stopped                                          1.2s
+canceled
+[+] Running 2/0noh572\Documents\DockerSession\Session_2\DockerCompose>
+ - Container dockercompose_mysql_1      Created                                          0.0s
+ - Container dockercompose_pythonapp_1  Created                                          0.0s
+Attaching to mysql_1, pythonapp_1
+mysql_1      | 2023-07-20 12:24:29+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | 2023-07-20 12:24:30+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql_1      | 2023-07-20 12:24:30+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.33-1.el8 started.
+mysql_1      | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql_1      | 2023-07-20T12:24:30.654508Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql_1      | 2023-07-20T12:24:30.656132Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+mysql_1      | 2023-07-20T12:24:30.668162Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql_1      | 2023-07-20T12:24:30.849389Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql_1      | 2023-07-20T12:24:31.127127Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql_1      | 2023-07-20T12:24:31.127213Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql_1      | 2023-07-20T12:24:31.133728Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql_1      | 2023-07-20T12:24:31.191667Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+mysql_1      | 2023-07-20T12:24:31.191866Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+pythonapp_1  | DB COnnected
+pythonapp_1  | [(1, 'Logesh', 'logeshmano@gmail.com'), (2, 'Vasanth', 'vasanthvk@gmail.com')]
+pythonapp_1 exited with code 0
